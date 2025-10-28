@@ -2,14 +2,44 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>APIs Combustibles Unigas | Nirvana</title>
+  <title>APIs Combustibles Unigas SAS | Nirvana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Tema oscuro (predeterminado) -->
+
+  <!-- Tema oscuro predeterminado -->
   <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
-  
+
   <style>
-    /* Estilo del interruptor */
+    /* ===== Layout general ===== */
+    body {
+      background-color: #1e1e1e;
+      color: #ddd;
+    }
+
+    /* Centrar el contenido principal */
+    .markdown-section {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #222;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    /* Sidebar a la derecha */
+    .sidebar {
+      order: 2;
+      border-left: 1px solid #333;
+      border-right: none;
+      background-color: #181818;
+    }
+
+    /* Invertir el orden principal */
+    .content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    /* Toggle de tema */
     .theme-toggle {
       position: fixed;
       top: 10px;
@@ -26,33 +56,64 @@
     .theme-toggle:hover {
       background: #0078ff;
     }
+
+    /* Enlaces */
+    a {
+      color: #2f8cff;
+    }
+    a:hover {
+      color: #68a8ff;
+    }
+
+    /* Nombre del sitio */
+    .app-name {
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      padding: 15px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .sidebar {
+        order: 1;
+        border-left: none;
+        border-bottom: 1px solid #333;
+      }
+      .markdown-section {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div id="app">Cargando documentación...</div>
-
-  <!-- Botón para cambiar tema -->
   <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
 
   <script>
     // Configuración de Docsify
     window.$docsify = {
-      name: 'APIs Combustibles Unigas | Nirvana',
-      repo: 'https://github.dev/ciogrupounigas/APIs/',
+      name: 'APIs Combustibles Unigas SAS | Nirvana',
+      repo: 'https://github.dev/ciogrupounigas/APIs',
       loadSidebar: true,
       subMaxLevel: 3,
       search: 'auto',
       themeColor: '#0078ff',
       auto2top: true
-    }
+    };
 
-    // Script para cambiar entre temas
+    // Modo oscuro / claro
     const themeToggle = document.getElementById('themeToggle');
     const themeLink = document.getElementById('theme-style');
-
-    // Guardar preferencia en localStorage
     const savedTheme = localStorage.getItem('docsify-theme');
+
     if (savedTheme) {
       themeLink.href = savedTheme;
       themeToggle.textContent = savedTheme.includes('dark') ? '🌙 Modo Claro' : '☀️ Modo Oscuro';
@@ -68,7 +129,7 @@
     });
   </script>
 
-  <!-- Scripts de Docsify -->
+  <!-- Scripts Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
