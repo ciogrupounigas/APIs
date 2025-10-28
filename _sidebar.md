@@ -2,7 +2,7 @@
   - [Inicio](README.md)
   - [Glosario](Glosario.md)
 
-  - **Consultas Dinámicas**
+- **Consultas Dinámicas**
     - [Bodegas](Consulta/bd.md)
     - [Centros de costos](Consulta/cc.md)
     - [Centros de operación](Consulta/co.md)
