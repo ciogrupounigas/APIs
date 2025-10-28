@@ -5,8 +5,9 @@ Permite emitir una factura válida ante la DIAN (Colombia).
 ---
 
 ## 🧩 Endpoint
+```bash
 POST /api/factura/emitir
-
+```
 
 ## 🧾 Ejemplo de solicitud
 
