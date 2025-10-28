@@ -5,4 +5,3 @@
     - [Boleta Electrónica](facturacion/boleta.md)
     - [Nota de Crédito](facturacion/nota-credito.md)
     - [Nota de Débito](facturacion/nota-debito.md)
-  
