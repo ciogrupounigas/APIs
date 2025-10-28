@@ -1,8 +1,28 @@
 - **DOCUMENTACIÓN APIS**
   - [Inicio](README.md)
+  - [Glosario](Glosario.md)
   - **Consultas Dinámicas**
-    - [Factura Electrónica](facturacion/factura.md)
+    - [Unidades de negocio](Consulta/un.md)
+    - [Centros de costos](Consulta/cc.md)
+    - [Bodegas](Consulta/bd.md)
+    - [Centros de operación](Consulta/co.md)
+    - [Unidades de medida](Consulta/um.md)
+    - [Terceros](Consulta/tercero.md)
+    - [Cuentas por cobrar general](Consulta/ccg.md)
+    - [Items](Consulta/item.md)
+    - [Cuentas por cobrar detalle](Consulta/ccd.md)
+    - [Cuentas por pagar general](Consulta/cpg.md)
+    - [Cuentas por pagar detalle](Consulta/cpd.md)
+    - [Factura Referencia](Consulta/fr.md)
+    - [Factura Tercero](Consulta/ft.md)
+    - [Cuentas por cobrar](Consulta/cc.md)
     - [Item Precio POS](Consultas/itempreciopos.md)
-    - [Nota de Crédito](facturacion/nota-credito.md)
-    - [Nota de Débito](facturacion/nota-debito.md)
-  
+  - **Conectores Dinámicos**  
+    - [Tercero Cliente](Conectores/tc.md)
+    - [Factura Venta](Conectores/fv.md)
+    - [Remision FE](Conectores/rfe.md)
+    - [Ventas Contado VC](Conectores/vc.md)
+    - [Factura Venta VD](Conectores/fvd.md)
+    - [Notas Credito NSX](Conectores/ncnsx.md)
+   
+
