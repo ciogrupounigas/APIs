@@ -1,44 +1,97 @@
-# 🧩 API - Maestros de Configuración | SIESA
+# 🧩 API - Combustibles Unigas | ERP SIESA
 
 ## 📘 Descripción General
 
-Esta API permite obtener los **maestros de configuración** utilizados por el sistema **NSX** para consolidar información y homologar las tablas de datos con el ERP corporativo.  
-Su objetivo principal es facilitar la **integración dinámica** entre sistemas mediante **consultas y conectores automáticos**, optimizando los procesos de sincronización y evitando duplicidades en la definición de parámetros maestros.
+Esta API proporciona acceso a los **maestros de configuración** utilizados por las distintas **unidades de negocio** y **verticales** de la organización.  
+Su propósito es **unificar y homologar** las estructuras de datos con el **ERP corporativo**, garantizando coherencia y trazabilidad en la información.
+
+A través de **consultas y conectores dinámicos**, la API permite una **integración automatizada y flexible** entre sistemas, optimizando los procesos de sincronización, reduciendo duplicidades y asegurando una **gestión centralizada** de los parámetros maestros.
 
 ---
 
 ## ⚙️ Funcionalidad
 
-- Obtener catálogos maestros (sucursales, productos, clientes, tipos de documento, etc.).
-- Centralizar configuraciones compartidas por los distintos módulos del sistema NSX.
-- Permitir consultas dinámicas parametrizadas según el tipo de maestro requerido.
-- Servir como **base de referencia para los conectores automáticos** hacia el ERP y otros sistemas.
+La API ofrece un conjunto integral de servicios orientados a la **gestión y consulta dinámica de maestros corporativos** y operaciones transversales del sistema **ERP**, facilitando la interoperabilidad con el **ERP SIESA** y otros sistemas externos.
+
+### 🔹 Principales funcionalidades
+
+- **Consultas dinámicas de terceros**, permitiendo la búsqueda y filtrado flexible de entidades externas.  
+- Obtención de **maestros**:
+  - Compañías  
+  - Unidades de negocio  
+  - Bodegas  
+  - Centros de operación  
+  - Unidades de medida  
+  - Ítems  
+- Consultas de **Cuentas por Cobrar (CxC)**:
+  - Detalle de movimientos por cliente  
+  - Consolidado general de saldos  
+- Consultas de **Cuentas por Pagar (CxP)**:
+  - Detalle de facturas y documentos asociados  
+  - Consolidado general de obligaciones  
+- **Creación dinámica de terceros (POST)**  
+- **Gestión comercial**:
+  - Remisiones de venta  
+  - Ventas de contado  
+  - Facturación electrónica  
+- **Servidor de pruebas** para validación de flujos y conectores antes de pasar a producción  
 
 ---
 
-## 🌐 Endpoint
+## 🧠 Ejemplos de Respuesta
 
-```http
-GET /api/nsx/config/maestros
-```
-
-```ruby
-https://api.unigas.com.co/nsx/config/maestros
-
-```
----
-
-## 🧾 Request Header
-Encabezado	Tipo	Descripción	Obligatorio
-Authorization	String	Token JWT para autenticación Bearer	✅ Sí
-Content-Type	String	Tipo de contenido (application/json)	✅ Sí
-x-api-key	String	Llave de acceso para validación de seguridad adicional	❌ No
-
-Ejemplo:
-
+### ✅ 200 - Aceptado
 ```json
 {
-  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "Content-Type": "application/json"
-} 
+  "status": 200,
+  "message": "Consulta procesada correctamente",
+  "data": [
+    {
+      "codigo": "B001",
+      "descripcion": "Bodega Principal Bogotá",
+      "estado": "Activo"
+    }
+  ]
+}
+```
+
+---
+
+### 🕓 200 - Pendiente
+```json
+{
+  "status": 200,
+  "message": "Solicitud recibida, en proceso de sincronización con ERP",
+  "job_id": "SYNC-984512",
+  "timestamp": "2025-10-28T15:32:45Z"
+}
+```
+
+---
+
+❌ 400 - Bad Request
+```json
+{
+  "status": 400,
+  "error": "Parámetros inválidos o faltantes",
+  "detalle": "El campo 'unidad_negocio' es obligatorio para esta consulta."
+}
+```
+
+---
+
+### 🔗 Integración y Pruebas
+
+Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejecutar consultas y validar los conectores dinámicos antes de su implementación definitiva en producción.
+
+
+
+### Servidor de pruebas:
+```arduino
+https://api-pruebas.unigas.com/nsx/
+```
+
+### Servidor de producción:
+```arduino
+https://api.unigas.com/nsx/
 ```
