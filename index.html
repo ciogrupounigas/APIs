@@ -1,21 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>APIs Combustibles Unigas SAS | Nirvana</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Tema oscuro predeterminado -->
   <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
 
   <style>
-    /* ===== Layout general ===== */
+    /* ===== Layout General ===== */
     body {
       background-color: #1e1e1e;
       color: #ddd;
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
 
-    /* Centrar el contenido principal */
+    /* ===== Header fijo superior ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      border-bottom: 1px solid #333;
+      z-index: 1000;
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header.light {
+      background-color: #ffffff;
+      color: #111;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00aaff;
+      text-decoration: none;
+      transition: color 0.4s ease;
+    }
+
+    header.light .logo {
+      color: #0078ff;
+    }
+
+    header .title {
+      flex-grow: 1;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: inherit;
+    }
+
+    /* ===== Botón modo oscuro/claro ===== */
+    .theme-toggle {
+      background: #1e1e1e;
+      color: white;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid #333;
+    }
+    header.light .theme-toggle {
+      background: #f4f4f4;
+      color: #111;
+      border: 1px solid #ccc;
+    }
+    .theme-toggle:hover {
+      background: #0078ff;
+      color: white;
+    }
+
+    /* ===== Docsify general ===== */
+    #app {
+      padding-top: 80px; /* Espacio para el header fijo */
+      opacity: 1;
+      transition: opacity 0.4s ease;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    .sidebar {
+      order: 2;
+      border-left: 1px solid #333;
+      border-right: none;
+      background-color: #181818;
+      transition: background-color 0.4s ease, border-color 0.4s ease;
+    }
+
+    header.light + .content .sidebar {
+      background-color: #f8f8f8;
+      border-left: 1px solid #ddd;
+    }
+
     .markdown-section {
       max-width: 850px;
       margin: 40px auto;
@@ -23,60 +118,35 @@
       background-color: #222;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background-color 0.4s ease, color 0.4s ease;
     }
 
-    /* Sidebar a la derecha */
-    .sidebar {
-      order: 2;
-      border-left: 1px solid #333;
-      border-right: none;
-      background-color: #181818;
+    header.light + .content .markdown-section {
+      background-color: #ffffff;
+      color: #111;
     }
 
-    /* Invertir el orden principal */
-    .content {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    /* Toggle de tema */
-    .theme-toggle {
-      position: fixed;
-      top: 10px;
-      right: 15px;
-      background: #1e1e1e;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      z-index: 9999;
-      transition: background 0.3s;
-    }
-    .theme-toggle:hover {
-      background: #0078ff;
-    }
-
-    /* Enlaces */
     a {
       color: #2f8cff;
+      transition: color 0.3s ease;
     }
     a:hover {
       color: #68a8ff;
     }
 
-    /* Nombre del sitio */
-    .app-name {
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      padding: 15px;
-      border-bottom: 1px solid #333;
-      text-align: center;
+    /* ===== Animación Fade ===== */
+    body.fade-out #app {
+      opacity: 0;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+        gap: 6px;
+      }
       .content {
         flex-direction: column;
       }
@@ -94,14 +164,25 @@
 </head>
 
 <body>
+  <!-- ===== Header superior fijo ===== -->
+  <header id="mainHeader">
+    <a href="#/" class="logo">
+      <!-- Si tienes logo, descomenta esta línea -->
+      <!-- <img src="logo.png" alt="Logo Unigas"> -->
+      🔥
+    </a>
+    <div class="title">APIs Combustibles Unigas SAS | Nirvana</div>
+    <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
+  </header>
+
+  <!-- ===== Docsify App ===== -->
   <div id="app">Cargando documentación...</div>
-  <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
 
   <script>
-    // Configuración de Docsify
+    // ===== Configuración Docsify =====
     window.$docsify = {
-      name: 'APIs Combustibles Unigas SAS | Nirvana',
-      repo: 'https://github.dev/ciogrupounigas/APIs/',
+      name: '',
+      repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
       search: 'auto',
@@ -109,27 +190,37 @@
       auto2top: true
     };
 
-    // Modo oscuro / claro
+    // ===== Modo oscuro / claro con animación y header dinámico =====
     const themeToggle = document.getElementById('themeToggle');
     const themeLink = document.getElementById('theme-style');
+    const mainHeader = document.getElementById('mainHeader');
     const savedTheme = localStorage.getItem('docsify-theme');
 
+    // Detectar tema guardado
     if (savedTheme) {
       themeLink.href = savedTheme;
-      themeToggle.textContent = savedTheme.includes('dark') ? '🌙 Modo Claro' : '☀️ Modo Oscuro';
+      const isDark = savedTheme.includes('dark');
+      themeToggle.textContent = isDark ? '🌙 Modo Claro' : '☀️ Modo Oscuro';
+      mainHeader.classList.toggle('light', !isDark);
     }
 
+    // Cambiar tema con transición
     themeToggle.addEventListener('click', () => {
-      const isDark = themeLink.href.includes('dark');
-      themeLink.href = isDark
-        ? '//cdn.jsdelivr.net/npm/docsify/themes/vue.css'
-        : '//cdn.jsdelivr.net/npm/docsify/themes/dark.css';
-      localStorage.setItem('docsify-theme', themeLink.href);
-      themeToggle.textContent = isDark ? '☀️ Modo Oscuro' : '🌙 Modo Claro';
+      document.body.classList.add('fade-out'); // Inicia animación
+      setTimeout(() => {
+        const isDark = themeLink.href.includes('dark');
+        themeLink.href = isDark
+          ? '//cdn.jsdelivr.net/npm/docsify/themes/vue.css'
+          : '//cdn.jsdelivr.net/npm/docsify/themes/dark.css';
+        localStorage.setItem('docsify-theme', themeLink.href);
+        themeToggle.textContent = isDark ? '☀️ Modo Oscuro' : '🌙 Modo Claro';
+        mainHeader.classList.toggle('light', isDark);
+        document.body.classList.remove('fade-out'); // Termina animación
+      }, 300);
     });
   </script>
 
-  <!-- Scripts Docsify -->
+  <!-- ===== Scripts Docsify ===== -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
