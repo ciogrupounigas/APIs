@@ -1,4 +1,4 @@
-## 🧾 Ejemplo: 1 productos 1 metodo de pago
+## 🧾 Ejemplo: 1 productos 1 metodo de pago.
 
 ```json
   {
