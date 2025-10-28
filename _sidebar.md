@@ -1,28 +1,28 @@
 - **DOCUMENTACIÓN APIS**
   - [Inicio](README.md)
   - [Glosario](Glosario.md)
-
-- **Consultas Dinámicas**
-    - [Bodegas](Consulta/bd.md)
+  - **Consultas Dinámicas**
+    - [Unidades de negocio](Consulta/un.md)
     - [Centros de costos](Consulta/cc.md)
+    - [Bodegas](Consulta/bd.md)
     - [Centros de operación](Consulta/co.md)
-    - [Cuentas por cobrar](Consulta/cc.md)
-    - [Cuentas por cobrar detalle](Consulta/ccd.md)
+    - [Unidades de medida](Consulta/um.md)
+    - [Terceros](Consulta/tercero.md)
     - [Cuentas por cobrar general](Consulta/ccg.md)
-    - [Cuentas por pagar detalle](Consulta/cpd.md)
+    - [Items](Consulta/item.md)
+    - [Cuentas por cobrar detalle](Consulta/ccd.md)
     - [Cuentas por pagar general](Consulta/cpg.md)
+    - [Cuentas por pagar detalle](Consulta/cpd.md)
     - [Factura Referencia](Consulta/fr.md)
     - [Factura Tercero](Consulta/ft.md)
-    - [Items](Consulta/item.md)
+    - [Cuentas por cobrar](Consulta/cc.md)
     - [Item Precio POS](Consultas/itempreciopos.md)
-    - [Terceros](Consulta/tercero.md)
-    - [Unidades de medida](Consulta/um.md)
-    - [Unidades de negocio](Consulta/un.md)
-
-  - **Conectores Dinámicos**
+  - **Conectores Dinámicos**  
+    - [Tercero Cliente](Conectores/tc.md)
     - [Factura Venta](Conectores/fv.md)
+    - [Remision FE](Conectores/rfe.md)
+    - [Ventas Contado VC](Conectores/vc.md)
     - [Factura Venta VD](Conectores/fvd.md)
     - [Notas Credito NSX](Conectores/ncnsx.md)
-    - [Remision FE](Conectores/rfe.md)
     - [Tercero Cliente](Conectores/tc.md)
-    - [Ventas Contado VC](Conectores/vc.md)
+
