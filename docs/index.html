@@ -1,19 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Documentación</title>
+  <title>APIs Combustibles Unigas | Nirvana</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  
+  <!-- Tema oscuro (predeterminado) -->
+  <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
+  
+  <style>
+    /* Estilo del interruptor */
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 15px;
+      background: #1e1e1e;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      z-index: 9999;
+      transition: background 0.3s;
+    }
+    .theme-toggle:hover {
+      background: #0078ff;
+    }
+  </style>
 </head>
+
 <body>
   <div id="app">Cargando documentación...</div>
+
+  <!-- Botón para cambiar tema -->
+  <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
+
   <script>
+    // Configuración de Docsify
     window.$docsify = {
-      name: 'Mi Proyecto Docsify',
-      repo: 'https://github.com/ciogrupounigas/APIs'
+      name: 'APIs Combustibles Unigas | Nirvana',
+      repo: 'https://github.dev/ciogrupounigas/APIs/',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      search: 'auto',
+      themeColor: '#0078ff',
+      auto2top: true
     }
+
+    // Script para cambiar entre temas
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLink = document.getElementById('theme-style');
+
+    // Guardar preferencia en localStorage
+    const savedTheme = localStorage.getItem('docsify-theme');
+    if (savedTheme) {
+      themeLink.href = savedTheme;
+      themeToggle.textContent = savedTheme.includes('dark') ? '🌙 Modo Claro' : '☀️ Modo Oscuro';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = themeLink.href.includes('dark');
+      themeLink.href = isDark
+        ? '//cdn.jsdelivr.net/npm/docsify/themes/vue.css'
+        : '//cdn.jsdelivr.net/npm/docsify/themes/dark.css';
+      localStorage.setItem('docsify-theme', themeLink.href);
+      themeToggle.textContent = isDark ? '☀️ Modo Oscuro' : '🌙 Modo Claro';
+    });
   </script>
+
+  <!-- Scripts de Docsify -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 </body>
 </html>
