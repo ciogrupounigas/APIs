@@ -61,7 +61,7 @@ curl -X 'GET' \
 ```bash
 {
   "status": 400,
-  "mensaje": "Parámetros inválidos o faltantes: IdCC o IdCia"
+  "mensaje": "Parámetros inválidos o faltantes: IdCO o IdCia"
 }
 ```
 ---
