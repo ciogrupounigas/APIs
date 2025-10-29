@@ -1,22 +1,27 @@
-# 🧩 API - Combustibles Unigas | ERP SIESA
-# Ver. 1.26.10.28
-
-## 📘 Descripción General
-
-Esta API proporciona acceso a los **maestros de configuración** utilizados por las distintas **unidades de negocio** y **verticales** de la organización.  
-Su propósito es **unificar y homologar** las estructuras de datos con el **ERP corporativo**, garantizando coherencia y trazabilidad en la información.
-
-A través de **consultas y conectores dinámicos**, la API permite una **integración automatizada y flexible** entre sistemas, optimizando los procesos de sincronización, reduciendo duplicidades y asegurando una **gestión centralizada** de los parámetros maestros.
+# 🧩 API - Combustibles Unigas | ERP SIESA  
+![version](https://img.shields.io/badge/Versión-1.26.10.28-blue.svg)  
+![estado](https://img.shields.io/badge/Estado-Estable-brightgreen.svg)  
+![ERP](https://img.shields.io/badge/ERP-SIESA-orange.svg)
 
 ---
 
-## ⚙️ Funcionalidad
+## 📘 Descripción General  
 
-La API ofrece un conjunto integral de servicios orientados a la **gestión y consulta dinámica de maestros corporativos** y operaciones transversales del sistema **ERP**, facilitando la interoperabilidad con el **ERP SIESA** y otros sistemas externos.
+La **API de Combustibles Unigas** proporciona acceso a los **maestros de configuración corporativos** utilizados por las distintas **unidades de negocio** de la organización.  
 
-### 🔹 Principales funcionalidades
+Su propósito es **unificar y homologar** las estructuras de datos con el **ERP SIESA**, garantizando coherencia, trazabilidad e integración fluida entre sistemas.  
 
-- **Consultas dinámicas de terceros**, permitiendo la búsqueda y filtrado flexible de entidades externas.  
+Mediante **consultas y conectores dinámicos**, permite una **integración automatizada**, optimizando procesos, reduciendo duplicidades y centralizando la información maestra.  
+
+---
+
+## ⚙️ Funcionalidad  
+
+Ofrece un conjunto integral de servicios para la **gestión y consulta dinámica de maestros corporativos**, facilitando la interoperabilidad con el **ERP SIESA** y sistemas externos.
+
+### 🔹 Principales funcionalidades  
+
+- **Consultas dinámicas** de terceros con filtros flexibles.  
 - Obtención de **maestros**:
   - Compañías  
   - Unidades de negocio  
@@ -24,37 +29,35 @@ La API ofrece un conjunto integral de servicios orientados a la **gestión y con
   - Centros de operación  
   - Unidades de medida  
   - Ítems  
-- Consultas de **Cuentas por Cobrar (CxC)**:
+- **Cuentas por Cobrar (CxC)**:
   - Detalle de movimientos por cliente  
   - Consolidado general de saldos  
-- Consultas de **Cuentas por Pagar (CxP)**:
+- **Cuentas por Pagar (CxP)**:
   - Detalle de facturas y documentos asociados  
   - Consolidado general de obligaciones  
 - **Creación dinámica de terceros (POST)**  
 - **Gestión comercial**:
-  - Remisiones de venta  
+  - Remisiones  
   - Ventas de contado  
   - Facturación electrónica  
-- **Servidor de pruebas** para validación de flujos y conectores antes de pasar a producción  
+- **Servidor de pruebas** para validación antes de producción  
 
 ---
 
-### 🔗 Integración y Pruebas
+## 🔗 Integración y Pruebas  
 
-Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejecutar consultas y validar los conectores dinámicos antes de su implementación definitiva en producción.
+Los endpoints están disponibles en el **servidor de pruebas** para validar consultas y conectores antes del paso a producción.  
 
-### Servidor de pruebas:
-```html
-/ConnektaQA
-```
+| Entorno | Ruta Base |
+|----------|------------|
+| 🧪 **QA / Pruebas** | `/ConnektaQA` |
+| 🚀 **Producción** | `/Core` |
 
-### Servidor de producción:
-```html
-/Core
-```
+---
 
-### Curl
-```html
+### 💻 Ejemplo `curl`
+
+```bash
 curl -X 'GET' \
   'http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS' \
   -H 'accept: */*' \
@@ -62,90 +65,8 @@ curl -X 'GET' \
   -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWsdSXQ'
 ```
 
-### Request URL
-```html
-http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS'
-```
+### 🔍 Ejemplo de Endpoint
 
-### Response Headers
-```html
- content-length: 436 
- content-type: application/json; charset=utf-8 
- date: Wed,29 Oct 2025 00:35:07 GMT 
- server: Microsoft-IIS/10.0 
- x-powered-by: ASP.NET 
-```
-
----
-## 🧠 Ejemplos de Respuesta
-
-### ✅ 200 - Aceptado
-```json
-{
-  "status": 200,
-  "message": "Consulta procesada correctamente",
-  "data": [
-    {
-      "codigo": "B001",
-      "descripcion": "Bodega Principal Bogotá",
-      "estado": "Activo"
-    }
-  ]
-}
-```
-
----
-
-### 🕓 200 - Pendiente
-```json
-{
-  "status": 200,
-  "message": "Solicitud recibida, en proceso de sincronización con ERP",
-  "job_id": "SYNC-984512",
-  "timestamp": "2025-10-28T15:32:45Z"
-}
-```
-
----
-
-### ❌ 400 - Bad Request
-```json
-{
-  "status": 400,
-  "error": "Parámetros inválidos o faltantes",
-  "detalle": "El campo 'unidad_negocio' es obligatorio para esta consulta."
-}
-```
-
----
-
-### ❌ 401 - Bad Request
-```json
-{
-  "status": 401,
-  "error": "No tiene autorización",
-  "detalle": "No tiene autorización"
-}
-```
-
----
-
-### ❌ 404 - Bad Request
-```json
-{
-  "status": 404,
-  "error": "Recurso de destino no existe",
-  "detalle": "Recurso de destino no existe"
-}
-```
-
----
-
-### ❌ 500 - Bad Request
-```json
-{
-  "status": 500,
-  "error": "Error interno en el servidor",
-  "detalle": "Error interno en el servidor"
-}
+```bash
+GET http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS
 ```
