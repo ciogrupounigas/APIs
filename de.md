@@ -62,10 +62,10 @@
 
 ## 🏢 Compañias
 
-| ID_COMPAÑIA | NIT | Razón social | idInterface |
+| **ID_COMPAÑIA** | **NIT** | **Razón social** | **idInterface** |
 |----------------|------------|-------------------------------------|------------|
-| 1 | 830085008 | COMBUSTIBLES UNIGAS SAS | 1216 |
-| 3 | 800041135 | AUTOMOTORES REINA SAS | 1236 |
+| 1 | 830085008 | COMBUSTIBLES UNIGAS SAS | **1216** |
+| 3 | 800041135 | AUTOMOTORES REINA SAS | **1236** |
 
 > **Aplica en los campos:** `F_CIA, IdCia`
 ---
@@ -73,6 +73,24 @@
 
 ## 💵 Condiciones de pago
 
+| **ID_CON_PAGO** | **Descripción** |
+|------------|-------------------------------------|
+| **CON** | CONTADO |
+| 28D | CREDITO 28 DIAS |
+| 10D | CREDITO A 10 DIAS |
+| 12D | CREDITO A 12 DIAS |
+| 14 | CREDITO A 14 DIAS |
+| 15D | CREDITO A 15 DIAS |
+| 20D | CREDITO A 20 DIAS |
+| 23D | CREDITO A 23 DIAS |
+| 30D | CREDITO A 30 DIAS |
+| 45D | CREDITO A 45 DIAS |
+| 5D | CREDITO A 5 DIAS |
+| 8D | CREDITO A 8 DIAS |
+| ANT | 100% ANTICIPADO |
+| CUO | CUOTAS |
+
+> **Aplica en los campos:** `f460_id_cond_pago`
 ---
 
 
