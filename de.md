@@ -41,34 +41,76 @@
 
 ## 🏣 Centros de Operación
 
+| **ID_CO** | **Descripción**                     | **API** |
+|----------------|-------------------------------------|------------|
+| 002 | EDS ESTANCIA | LIQUIDOS – GNV |
+| 003 | EDS TEXANA | LIQUIDOS - GNV |
+| 010 | EDS REINA | GNV |
+| 011 | EDS AVENIDA | GNV |
+| 013 | EDS TERMINAL | GNV |
+| 015 | EDS MONTEARROYO | LIQUIDOS - GNV |
+| 016 | EDS LA GRAN AVENIDA | LIQUIDOS |
+| 018 | EDS NUEVA DIANA | LIQUIDOS - GNV |
+| 019 | EDS COTA | LIQUIDOS |
+| 021 | EDS TRANSUNIDOS | GNV |
+| 025 | EDS PEGASO | GNV | 
+
+> **Aplica para los campos:** `F350_ID_CO`, `f470_id_co`, `f470_id_co_movto`, `f461_id_co_fact`,
+`f471_id_co`, `F201_ID_CO_FACTURA`
 ---
+
+
 ## 🏢 Compañias
 
+| ID_COMPAÑIA | Numero identificación | Razón social | idInterface |
+|----------------|-------------------------------------|------------|
+| 1 | 830085008 | COMBUSTIBLES UNIGAS SAS | 1216 |
+| 3 | 800041135 | AUTOMOTORES REINA SAS | 1236 |
+
+> **Aplica en los campos:** `F_CIA, IdCia`
 ---
+
+
 ## 💵 Condiciones de pago
 
 ---
+
+
 ## 💨 Items
 
 ---
+
+
 ## 🎏 Lista de precios
 
 ---
+
+
 ## 💳 Medios de pago
 
 ---
+
+
 ## 👲 Tipo cliente factura
 
 ---
+
+
 ## 📧 Tipo de documentos
 
 ---
+
+
 ## 📮 Tipo sucursales cliente
 
 ---
+
+
 ## 📲 Unidades de medida
 
 ---
+
+
 ## 💰 Unidades de negocio
   - [Bodegas](Consulta/bd.md)
   - [Centros de operación](Consulta/co.md)
