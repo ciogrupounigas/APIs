@@ -1,254 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>APIs Combustibles Unigas SAS | ERP SIESA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>APIs Combustibles Unigas SAS | NSX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" />
 
-  <!-- Tema oscuro predeterminado -->
-  <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
+    <!-- Docsify -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
 
-  <style>
-    :root {
-      --bg-color: #1e1e1e;
-      --text-color: #ddd;
-      --sidebar-bg: #181818;
-      --sidebar-border: #333;
-      --link-color: #2f8cff;
-      --link-hover: #68a8ff;
-      --content-max-width: 1200px;
-    }
+    <style>
+      :root {
+        --primary-color: #007bff;
+        --background-light: #ffffff;
+        --background-dark: #1e1e1e;
+        --text-light: #000000;
+        --text-dark: #ffffff;
+      }
 
-    body.light-mode {
-      --bg-color: #ffffff;
-      --text-color: #111;
-      --sidebar-bg: #f8f8f8;
-      --sidebar-border: #ddd;
-      --link-color: #0078ff;
-      --link-hover: #005bd1;
-    }
+      body {
+        background-color: var(--background-light);
+        color: var(--text-light);
+        transition: background-color 0.3s, color 0.3s;
+      }
 
-    /* ===== Layout General ===== */
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      margin: 0;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      transition: background-color 0.4s ease, color 0.4s ease;
-    }
+      [data-theme="dark"] body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+      }
 
-    /* ===== Header fijo superior ===== */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      border-bottom: 1px solid var(--sidebar-border);
-      z-index: 1000;
-      background-color: var(--sidebar-bg);
-      color: var(--text-color);
-      transition: all 0.4s ease;
-    }
-
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 18px;
-      font-weight: bold;
-      color: var(--link-color);
-      text-decoration: none;
-    }
-
-    header .title {
-      flex-grow: 1;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-      color: var(--text-color);
-    }
-
-    /* ===== Botón modo oscuro/claro ===== */
-    .theme-toggle {
-      background: transparent;
-      color: var(--text-color);
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      cursor: pointer;
-      border: 1px solid var(--sidebar-border);
-      transition: all 0.3s ease;
-    }
-
-    .theme-toggle:hover {
-      background: var(--link-color);
-      color: #fff;
-    }
-
-    /* ===== Docsify general ===== */
-    #app {
-      padding-top: 80px;
-      opacity: 1;
-      transition: opacity 0.4s ease;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: row-reverse;
-    }
-
-    .sidebar {
-      order: 2;
-      border-left: 1px solid var(--sidebar-border);
-      background-color: var(--sidebar-bg);
-      transition: background-color 0.4s ease, border-color 0.4s ease;
-    }
-
-    /* ===== Contenido principal ===== */
-    .markdown-section {
-      max-width: var(--content-max-width);
-      width: 100%;
-      margin: 40px auto;
-      padding: 40px 60px;
-      background: var(--bg-color);
-      color: var(--text-color);
-      box-shadow: none;
-      border-radius: 10px;
-      transition: background-color 0.4s ease, color 0.4s ease;
-      line-height: 1.6;
-    }
-
-    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
-      color: var(--text-color);
-      border-bottom: 1px solid var(--sidebar-border);
-      padding-bottom: 0.3em;
-    }
-
-    a {
-      color: var(--link-color);
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: var(--link-hover);
-    }
-
-    body, .content, .sidebar {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-    }
-
-    /* ===== Animación Fade ===== */
-    body.fade-out #app {
-      opacity: 0;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+      /* Encabezado fijo */
+      nav.app-name {
+        background: linear-gradient(90deg, #007bff, #0056b3);
+        color: white;
         text-align: center;
-        gap: 6px;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 18px;
+        border-bottom: 2px solid #004080;
       }
 
-      .content {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        order: 1;
-        border-left: none;
-        border-bottom: 1px solid var(--sidebar-border);
-      }
-
+      /* Caja de contenido */
       .markdown-section {
-        margin: 20px;
-        padding: 20px;
+        background-color: inherit;
+        color: inherit;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: none;
+        transition: background-color 0.3s;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <!-- ===== Header superior fijo ===== -->
-  <header id="mainHeader">
-    <a href="#/" class="logo">🔥</a>
-    <div class="title">APIs Combustibles Unigas SAS | ERP SIESA</div>
-    <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
-  </header>
+      /* Botón de tema */
+      #theme-toggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">Cargando documentación...</div>
+    <button id="theme-toggle">🌙 Modo Oscuro</button>
 
-  <!-- ===== Docsify App ===== -->
-  <div id="app">Cargando documentación...</div>
+    <script>
+      window.$docsify = {
+        name: 'APIs Combustibles Unigas SAS | NSX',
+        repo: '',
+        loadSidebar: true,
+        subMaxLevel: 2,
+        auto2top: true,
+        alias: {
+          '/.*/_sidebar.md': '/_sidebar.md'
+        },
+        executeScript: true,
+        themeColor: '#007bff'
+      };
 
-  <script>
-    // ===== Configuración Docsify =====
-    window.$docsify = {
-      name: 'APIs Combustibles Unigas SAS',
-      repo: '',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      search: 'auto',
-      themeColor: '#0078ff',
-      auto2top: true,
-      // 🔒 fuerza colapso inicial de todas las secciones
-      sidebarDisplayLevel: 0,
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      loadNavbar: false
-    };
+      // Tema oscuro/claro persistente
+      const themeButton = document.getElementById('theme-toggle');
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      themeButton.textContent = currentTheme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
 
-    // ===== Modo oscuro / claro =====
-    const themeToggle = document.getElementById('themeToggle');
-    const themeLink = document.getElementById('theme-style');
-    const savedTheme = localStorage.getItem('docsify-theme-mode');
+      themeButton.addEventListener('click', () => {
+        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        themeButton.textContent = theme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+      });
 
-    if (savedTheme === 'light') {
-      document.body.classList.add('light-mode');
-      themeLink.href = '//cdn.jsdelivr.net/npm/docsify/themes/vue.css';
-      themeToggle.textContent = '☀️ Modo Oscuro';
-    }
+      // --- Forzar todos los menús colapsados al inicio ---
+      document.addEventListener('DOMContentLoaded', () => {
+        const collapse = () => {
+          document.querySelectorAll('.sidebar-nav > ul > li').forEach(li => {
+            const nested = li.querySelector('ul');
+            if (nested) nested.style.display = 'none'; // ocultar todos
+          });
+        };
+        collapse();
+        // Recolapsar al cambiar de página
+        window.addEventListener('hashchange', collapse);
+      });
+    </script>
 
-    themeToggle.addEventListener('click', () => {
-      const isLight = document.body.classList.toggle('light-mode');
-      document.body.classList.add('fade-out');
-      setTimeout(() => {
-        themeLink.href = isLight
-          ? '//cdn.jsdelivr.net/npm/docsify/themes/vue.css'
-          : '//cdn.jsdelivr.net/npm/docsify/themes/dark.css';
-        themeToggle.textContent = isLight ? '☀️ Modo Oscuro' : '🌙 Modo Claro';
-        localStorage.setItem('docsify-theme-mode', isLight ? 'light' : 'dark');
-        document.body.classList.remove('fade-out');
-      }, 300);
-    });
-
-    // ===== Colapsar todo el sidebar al cargar =====
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const toggles = document.querySelectorAll('.sidebar-nav > ul > li');
-        toggles.forEach(li => li.classList.remove('open'));
-      }, 800);
-    });
-
-    // ===== Mantener colapsado al navegar =====
-    window.addEventListener('hashchange', () => {
-      const openGroups = document.querySelectorAll('.sidebar-nav li.open');
-      openGroups.forEach(li => li.classList.remove('open'));
-    });
-  </script>
-
-  <!-- ===== Scripts Docsify ===== -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
-</body>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  </body>
 </html>
