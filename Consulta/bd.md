@@ -1,5 +1,5 @@
 # 🏗️ BODEGAS
-```bash
+
 | **ID_BODEGA** | **Descripción**                     | **ID_CO** |
 |----------------|-------------------------------------|------------|
 | EST01 | BOD ESTANCIA GNV | 002 |
@@ -23,7 +23,6 @@
 | COT03 | BOD COTA, TIENDA | 019 |
 | TRA01 | BOD TRANSUNIDOS GNV | 021 |
 | PEG01 | BOD PEGASO GNV | 022 |
-```
 
 > **Aplica para los campos:** `f470_id_bodega`
 
@@ -35,11 +34,11 @@
 https://SERVER/v3/ejecutarconsulta?idCompania=6207&descripcion=BODEGAS&parametros=IdBodega={IdBodega}|IdCia={IdCia}
 ```
 
-<details> <summary>🧾 <strong>Request Headers</strong></summary>
+## 🧾 Request Headers
+```bash
 Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS
-
-</details>
+```
 
 ## 🔍 Query Params
 ```bash
