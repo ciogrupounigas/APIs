@@ -1,7 +1,3 @@
-.
-.
-.
-.
 # 🧩 API - Combustibles Unigas | ERP SIESA  
 ![version](https://img.shields.io/badge/Versión-1.26.10.28-blue.svg)  
 ![estado](https://img.shields.io/badge/Estado-Estable-brightgreen.svg)  
@@ -73,4 +69,9 @@ curl -X 'GET' \
 ![GET](https://img.shields.io/badge/GET-brightgreen.svg) 
 ```bash
 GET http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS
+```
+
+![POST](https://img.shields.io/badge/POST-orange.svg) 
+```bash
+POST http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS
 ```
