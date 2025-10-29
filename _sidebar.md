@@ -1,7 +1,7 @@
 - [Inicio](README.md)
 - [Glosario](Glosario.md)
 
-<details>
+<details open>
   <summary><strong>Consultas Dinámicas</strong></summary>
 
   - [Bodegas](Consulta/bd.md)
@@ -28,7 +28,7 @@
   - [Factura Venta VD](Conectores/fvd.md)
   - [Factura Venta POS VDP](Conectores/fvp.md)
   - [Notas Credito NSX](Conectores/ncnsx.md)
-  - [Remision FE](Conectores/rfe.md)
+  - [Remisión FE](Conectores/rfe.md)
   - [Tercero Cliente](Conectores/tc.md)
   - [Ventas Contado VC](Conectores/vc.md)
 </details>
