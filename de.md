@@ -110,6 +110,30 @@
 
 ## 🎏 Lista de precios
 
+*COMBUSTIBLES UNIGAS SAS*
+
+| **ID_LISTA_PRECIO** | **Descripción lista precio** |
+|------------|-------------------------------------|
+| 002 | LP EDS ESTANCIA |
+| 003 | LP EDS TEXANA |
+| 010 | LP EDS REINA (GNV) |
+| 011 | LP EDS LA AVENIDA |
+| 013 | LP EDS TERMINAL |
+| 015 | LP EDS MONTEARROYO |
+| 016 | LP EDS LA GRAN AVENIDA |
+| 018 | LP EDS NUEVA DIANA |
+| 019 | LP EDS COTA |
+| 022 | LP EDS TRANSUNIDOS |
+
+> **Aplica para los campos:** `f470_id_lista_precio`
+
+*AUTOMOTORES REINA SAS*
+
+| **ID_LISTA_PRECIO** | **Descripción lista precio** |
+|------------|-------------------------------------|
+| 001 | LP AUTOMOTORES REINA |
+
+> **Aplica para los campos:** `f470_id_lista_precio` 
 ---
 
 
