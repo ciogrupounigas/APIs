@@ -1,9 +1,5 @@
-<details open>
-  <summary><strong>Welcome</strong></summary>
-
-  - [Inicio](README.md)
-  - [Glosario](Glosario.md)
-</details>
+- [Inicio](README.md)
+- [Glosario](Glosario.md)
 
 <details open>
   <summary><strong>Consultas Dinámicas</strong></summary>
@@ -46,16 +42,4 @@
   - [Unidades de medida](Consulta/um.md)
   - [Unidades de negocio](Consulta/un.md)
   
-</details>
-
-<details>
-  <summary><strong>Estructura POST JSON</strong></summary>
-
-  - [Factura Venta](estructura/efv.md)
-  - [Factura Venta VD](estructura/efvd.md)
-  - [Factura Venta POS VDP](estructura/efvp.md)
-  - [Notas Credito NSX](estructura/encnsx.md)
-  - [Remisión FE](estructura/erfe.md)
-  - [Tercero Cliente](estructura/etc.md)
-  - [Ventas Contado VC](estructura/evc.md)
 </details>
