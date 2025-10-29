@@ -13,6 +13,7 @@
   - [Factura Tercero](Consulta/ft.md)
   - [Items](Consulta/item.md)
   - [Item Precio POS](Consulta/itempreciopos.md)
+  - [Medios de Pago](Consulta/mp.md)
   - [Terceros](Consulta/tercero.md)
   - [Unidades de medida](Consulta/um.md)
   - [Unidades de negocio](Consulta/un.md)
