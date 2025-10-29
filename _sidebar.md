@@ -7,7 +7,7 @@
   - [Bodegas](Consulta/bd.md)
   - [Centros de costos](Consulta/cc.md)
   - [Centros de operación](Consulta/co.md)
-  - [Cuentas por cobrar](Consulta/cc.md)
+  - [Cuentas por cobrar](Consulta/cxc.md)
   - [Cuentas por cobrar detalle](Consulta/ccd.md)
   - [Cuentas por cobrar general](Consulta/ccg.md)
   - [Cuentas por pagar detalle](Consulta/cpd.md)
