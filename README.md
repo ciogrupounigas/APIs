@@ -39,6 +39,44 @@ La API ofrece un conjunto integral de servicios orientados a la **gestión y con
 
 ---
 
+### 🔗 Integración y Pruebas
+
+Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejecutar consultas y validar los conectores dinámicos antes de su implementación definitiva en producción.
+
+### Servidor de pruebas:
+```arduino
+/ConnektaQA
+```
+
+### Servidor de producción:
+```arduino
+/Core
+```
+
+### Curl
+```arduino
+curl -X 'GET' \
+  'http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS' \
+  -H 'accept: */*' \
+  -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+  -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXQ'
+```
+
+### Request URL
+```arduino
+http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS'
+```
+
+### Response Headers
+```arduino
+ content-length: 436 
+ content-type: application/json; charset=utf-8 
+ date: Wed,29 Oct 2025 00:35:07 GMT 
+ server: Microsoft-IIS/10.0 
+ x-powered-by: ASP.NET 
+```
+
+---
 ## 🧠 Ejemplos de Respuesta
 
 ### ✅ 200 - Aceptado
@@ -79,30 +117,4 @@ La API ofrece un conjunto integral de servicios orientados a la **gestión y con
 }
 ```
 
----
-
-### 🔗 Integración y Pruebas
-
-Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejecutar consultas y validar los conectores dinámicos antes de su implementación definitiva en producción.
-
-
-
-### Servidor de pruebas:
-```arduino
-/ConnektaQA
-```
-
-### Servidor de producción:
-```arduino
-/Core
-```
-
-### Curl
-```arduino
-curl -X 'GET' \
-  'http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS' \
-  -H 'accept: */*' \
-  -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
-  -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXQ'
-```
 ---
