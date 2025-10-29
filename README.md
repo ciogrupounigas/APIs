@@ -49,12 +49,12 @@ Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejec
 ```
 
 ### Servidor de producción:
-```arduino
+```html
 /Core
 ```
 
 ### Curl
-```arduino
+```html
 curl -X 'GET' \
   'http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS' \
   -H 'accept: */*' \
@@ -63,12 +63,12 @@ curl -X 'GET' \
 ```
 
 ### Request URL
-```arduino
+```html
 http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS'
 ```
 
 ### Response Headers
-```arduino
+```html
  content-length: 436 
  content-type: application/json; charset=utf-8 
  date: Wed,29 Oct 2025 00:35:07 GMT 
