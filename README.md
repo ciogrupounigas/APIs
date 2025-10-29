@@ -152,12 +152,10 @@ Los siguientes ejemplos reflejan posibles respuestas del servicio según el esta
 
 ### 🔐 Autenticación y Seguridad
 
-warn
 Cada proveedor de desarrollo deberá solicitar sus credenciales de acceso (Key / Token) al área de Tecnología.
 Las credenciales son únicas, temporales y asociadas a su entorno de pruebas.
 
 Key → Identificador de aplicación o integración.
-
 Token → Credencial temporal o por sesión.
 
 Método recomendado → Autenticación por encabezados HTTP seguros (Header Authorization).
@@ -170,37 +168,29 @@ Token: XXXXXXXXXXXXXXXXXXXXX
 
 🧩 Guía para Proveedores Externos de Desarrollo
 
-tip
-Esta guía aplica para empresas integradoras, freelancers o desarrolladores que creen conectores o servicios sobre la API Unigas.
+Esta guía aplica para empresas integradoras, freelancers o desarrolladores que creen conectores o servicios sobre la API Combustibles Unigas SAS.
 
 ✅ Buenas Prácticas
 
-Usar siempre el entorno QA antes de solicitar despliegue.
-
-Documentar los endpoints consumidos y parámetros utilizados.
-
-Registrar logs de ejecución para trazabilidad.
-
-Evitar llamadas masivas sin control de paginación.
-
-Validar códigos HTTP antes de continuar un flujo.
+* Usar siempre el entorno QA antes de solicitar despliegue.
+* Documentar los endpoints consumidos y parámetros utilizados.
+* Registrar logs de ejecución para trazabilidad.
+* Evitar llamadas masivas sin control de paginación.
+* Validar códigos HTTP antes de continuar un flujo.
 
 🚫 No permitido
 
-danger
-
-Usar credenciales de producción sin autorización.
-
-Modificar estructuras del payload sin aprobación.
-
-Publicar endpoints o tokens en repositorios públicos.
+* Usar credenciales de producción sin autorización.
+* Modificar estructuras del payload sin aprobación.
+* Publicar endpoints o tokens en repositorios públicos.
 
 📎 Información Complementaria
 Tema	Detalle
 📚 Documentación ERP SIESA	Disponible bajo solicitud interna
 🧠 Manual de conectores	En actualización
 🔐 Seguridad	Basada en Key + Token + HTTPS
-🧾 Contacto técnico	soporte-ti@unigas.com.co
-
+🧾 Contacto técnico	cio@grupounigas.co
+---
 © Combustibles Unigas - Dirección de Tecnología | 2025
 Documentación generada para uso interno y controlado de proveedores de integración con ERP SIESA.
+---
