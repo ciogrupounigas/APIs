@@ -94,7 +94,7 @@
 ---
 
 
-## 💨 Items Operacion EDS
+## 💨 Items Operación EDS
 
 | **ID_ITEM** | **Descripción del Item** |
 |------------|-------------------------------------|
