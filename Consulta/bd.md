@@ -61,6 +61,7 @@ parametros: IdBodega={IdBodega}|IdCia={IdCia}
   ]
 }
 ```
+
 ## ⚠️ Ejemplo de error 400 Bad Request
 ```bash
 {
