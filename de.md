@@ -1,5 +1,5 @@
 ## 🏗️ BODEGAS 
-  *COMBUSTIBLES UNIGAS SAS*
+*COMBUSTIBLES UNIGAS SAS*
 
 | **ID_BODEGA** | **Descripción**                     | **ID_CO** |
 |----------------|-------------------------------------|------------|
@@ -27,8 +27,8 @@
 
 > **Aplica para los campos:** `f470_id_bodega`
 
-  *AUTOMOTORES REINA SAS*
-  
+*AUTOMOTORES REINA SAS*
+
 | **ID_BODEGA** | **Descripción** | **ID_CO** |
 |----------------|-------------------------------------|------------|
 | REI02 | BOD REINA  LIQUIDOS | 001 |
