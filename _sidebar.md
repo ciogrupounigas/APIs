@@ -30,7 +30,7 @@
 </details>
 
 <details open>
-  <summary><strong>Datos estaticos</strong></summary>
+  <summary><strong>Datos estáticos</strong></summary>
 
   - [Bodegas](Consulta/bd.md)
   - [Centros de operación](Consulta/co.md)
