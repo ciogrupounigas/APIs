@@ -1,5 +1,5 @@
 # 🏗️ BODEGAS
-
+```bash
 | **ID_BODEGA** | **Descripción**                     | **ID_CO** |
 |----------------|-------------------------------------|------------|
 | EST01 | BOD ESTANCIA GNV | 002 |
@@ -25,7 +25,7 @@
 | PEG01 | BOD PEGASO GNV | 022 |
 
 > **Aplica para los campos:** `f470_id_bodega`
-
+```
 ---
 
 ## ⚙️ Endpoint: **BODEGAS**
