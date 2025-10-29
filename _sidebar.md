@@ -1,7 +1,7 @@
 <details open>
-  <summary><strong>APIs ERP SIESA</strong></summary>
-  - [Inicio](README.md)
-  - [Glosario](Glosario.md)
+
+- [Inicio](README.md)
+- [Glosario](Glosario.md)
 </details>
 
 <details open>
