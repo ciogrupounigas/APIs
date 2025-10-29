@@ -4,19 +4,12 @@
 <details open>
   <summary><strong>Consultas Dinámicas</strong></summary>
 
-  - [Bodegas](Consulta/bd.md)
   - [Centros de costos](Consulta/cc.md)
-  - [Centros de operación](Consulta/co.md)
-  - [Compañías](Consulta/cia.md)
-  - [Condiciones de pago](Consulta/cp.md)
   - [Cuentas por cobrar detalle](Consulta/ccd.md)
   - [Cuentas por pagar detalle](Consulta/cpd.md)
   - [Factura Referencia](Consulta/fr.md)
   - [Factura Tercero](Consulta/ft.md)
-  - [Items](Consulta/item.md)
   - [Item Precio POS](Consulta/ipp.md)
-  - [Lista de Precios](Consulta/lp.md)
-  - [Medios de Pago](Consulta/mp.md)
   - [Terceros](Consulta/tercero.md)
   - [Tipo cliente factura](Consulta/tcf.md)
   - [Tipo de documentos](Consulta/td.md)
@@ -37,14 +30,27 @@
   - [Ventas Contado VC](Conectores/vc.md)
 </details>
 
+<details open>
+  <summary><strong>Datos estaticos</strong></summary>
+
+  - [Bodegas](Consulta/bd.md)
+  - [Centros de operación](Consulta/co.md)
+  - [Compañías](Consulta/cia.md)
+  - [Condiciones de pago](Consulta/cp.md)
+  - [Items](Consulta/item.md)
+  - [Lista de Precios](Consulta/lp.md)
+  - [Medios de Pago](Consulta/mp.md)
+  
+</details>
+
 <details>
   <summary><strong>Estructura en blanco</strong></summary>
 
-  - [Factura Venta](Conectores/fv.md)
-  - [Factura Venta VD](Conectores/fvd.md)
-  - [Factura Venta POS VDP](Conectores/fvp.md)
-  - [Notas Credito NSX](Conectores/ncnsx.md)
-  - [Remisión FE](Conectores/rfe.md)
-  - [Tercero Cliente](Conectores/tc.md)
-  - [Ventas Contado VC](Conectores/vc.md)
+  - [Factura Venta](estructura/efv.md)
+  - [Factura Venta VD](estructura/efvd.md)
+  - [Factura Venta POS VDP](estructura/efvp.md)
+  - [Notas Credito NSX](estructura/encnsx.md)
+  - [Remisión FE](estructura/erfe.md)
+  - [Tercero Cliente](estructura/etc.md)
+  - [Ventas Contado VC](estructura/evc.md)
 </details>
