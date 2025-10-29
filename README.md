@@ -108,7 +108,7 @@ http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS'
 
 ---
 
-❌ 400 - Bad Request
+### ❌ 400 - Bad Request
 ```json
 {
   "status": 400,
@@ -118,3 +118,34 @@ http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS'
 ```
 
 ---
+
+### ❌ 401 - Bad Request
+```json
+{
+  "status": 401,
+  "error": "No tiene autorización",
+  "detalle": "No tiene autorización"
+}
+```
+
+---
+
+### ❌ 404 - Bad Request
+```json
+{
+  "status": 404,
+  "error": "Recurso de destino no existe",
+  "detalle": "Recurso de destino no existe"
+}
+```
+
+---
+
+### ❌ 500 - Bad Request
+```json
+{
+  "status": 500,
+  "error": "Error interno en el servidor",
+  "detalle": "Error interno en el servidor"
+}
+```
