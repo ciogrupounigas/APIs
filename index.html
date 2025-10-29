@@ -10,23 +10,20 @@
 
   <style>
     :root {
-      /* ===== Variables modo oscuro ===== */
       --bg-color: #1e1e1e;
       --text-color: #ddd;
       --sidebar-bg: #181818;
       --sidebar-border: #333;
-      --card-bg: #222;
       --link-color: #2f8cff;
       --link-hover: #68a8ff;
+      --content-max-width: 1200px;
     }
 
     body.light-mode {
-      /* ===== Variables modo claro ===== */
       --bg-color: #ffffff;
       --text-color: #111;
       --sidebar-bg: #f8f8f8;
       --sidebar-border: #ddd;
-      --card-bg: #ffffff;
       --link-color: #0078ff;
       --link-hover: #005bd1;
     }
@@ -66,7 +63,6 @@
       font-weight: bold;
       color: var(--link-color);
       text-decoration: none;
-      transition: color 0.4s ease;
     }
 
     header .title {
@@ -79,14 +75,14 @@
 
     /* ===== Botón modo oscuro/claro ===== */
     .theme-toggle {
-      background: var(--card-bg);
+      background: transparent;
       color: var(--text-color);
       padding: 6px 10px;
       border-radius: 6px;
       font-size: 14px;
       cursor: pointer;
-      transition: all 0.3s ease;
       border: 1px solid var(--sidebar-border);
+      transition: all 0.3s ease;
     }
 
     .theme-toggle:hover {
@@ -113,22 +109,38 @@
       transition: background-color 0.4s ease, border-color 0.4s ease;
     }
 
+    /* ===== Contenido principal ===== */
     .markdown-section {
-      max-width: 850px;
+      max-width: var(--content-max-width);
+      width: 100%;
       margin: 40px auto;
-      padding: 40px;
-      background-color: var(--card-bg);
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      padding: 40px 60px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      box-shadow: none;
+      border-radius: 10px;
       transition: background-color 0.4s ease, color 0.4s ease;
+      line-height: 1.6;
+    }
+
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      color: var(--text-color);
+      border-bottom: 1px solid var(--sidebar-border);
+      padding-bottom: 0.3em;
     }
 
     a {
       color: var(--link-color);
       transition: color 0.3s ease;
     }
+
     a:hover {
       color: var(--link-hover);
+    }
+
+    body, .content, .sidebar {
+      background-color: var(--bg-color);
+      color: var(--text-color);
     }
 
     /* ===== Animación Fade ===== */
@@ -136,20 +148,7 @@
       opacity: 0;
     }
 
-    /* ===== Sidebar Collapse Icons ===== */
-    .sidebar ul li > a:before {
-      content: "";
-      margin-right: 5px;
-    }
-
-    .sidebar ul li.open > a:before {
-      content: "▼ ";
-    }
-
-    .sidebar ul li.closed > a:before {
-      content: "▶ ";
-    }
-
+    /* ===== Responsive ===== */
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -158,74 +157,23 @@
         text-align: center;
         gap: 6px;
       }
+
       .content {
         flex-direction: column;
       }
+
       .sidebar {
         order: 1;
         border-left: none;
         border-bottom: 1px solid var(--sidebar-border);
       }
+
       .markdown-section {
         margin: 20px;
         padding: 20px;
       }
     }
   </style>
-  <style>
-/* --- Ajuste de fondo general (modo claro/oscuro incluido) --- */
-body {
-  background-color: var(--bg-color, #f9f9f9);
-  color: var(--text-color, #1a1a1a);
-  margin: 0;
-  padding: 0;
-}
-
-/* --- Asegura que el contenido ocupe todo el ancho --- */
-.app-nav,
-.markdown-section {
-  max-width: 100% !important;
-  width: 100% !important;
-  background: inherit !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-/* --- Quita el borde sombreado que encierra el texto --- */
-.markdown-section {
-  box-shadow: none !important;
-  background: transparent !important;
-  padding: 2rem 3rem;
-}
-
-/* --- Control de modo claro / oscuro global --- */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-}
-
-[data-theme='dark'] {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  color-scheme: dark;
-}
-
-body, .content, .sidebar {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
-
-/* --- Sidebar también en modo oscuro --- */
-.sidebar {
-  background-color: var(--bg-color);
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-[data-theme='dark'] .sidebar {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-</style>
-
 </head>
 
 <body>
@@ -242,7 +190,7 @@ body, .content, .sidebar {
   <script>
     // ===== Configuración Docsify =====
     window.$docsify = {
-      name: '',
+      name: 'APIs Combustibles Unigas SAS',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
@@ -282,6 +230,5 @@ body, .content, .sidebar {
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
 </body>
 </html>
