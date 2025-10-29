@@ -69,3 +69,4 @@ parametros: IdBodega={IdBodega}|IdCia={IdCia}
   "mensaje": "Parámetros inválidos o faltantes: IdBodega o IdCia"
 }
 ```
+---
