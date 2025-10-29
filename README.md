@@ -66,7 +66,7 @@ curl -X 'GET' \
 ```
 
 ### 🔍 Ejemplo de Endpoint
-
+![GET](https://img.shields.io/badge/GET-brightgreen.svg) 
 ```bash
 GET http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS
 ```
