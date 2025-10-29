@@ -172,6 +172,60 @@
       }
     }
   </style>
+  <style>
+/* --- Ajuste de fondo general (modo claro/oscuro incluido) --- */
+body {
+  background-color: var(--bg-color, #f9f9f9);
+  color: var(--text-color, #1a1a1a);
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Asegura que el contenido ocupe todo el ancho --- */
+.app-nav,
+.markdown-section {
+  max-width: 100% !important;
+  width: 100% !important;
+  background: inherit !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* --- Quita el borde sombreado que encierra el texto --- */
+.markdown-section {
+  box-shadow: none !important;
+  background: transparent !important;
+  padding: 2rem 3rem;
+}
+
+/* --- Control de modo claro / oscuro global --- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  color-scheme: dark;
+}
+
+body, .content, .sidebar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* --- Sidebar también en modo oscuro --- */
+.sidebar {
+  background-color: var(--bg-color);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .sidebar {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+</style>
+
 </head>
 
 <body>
