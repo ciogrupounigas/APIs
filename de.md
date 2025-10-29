@@ -34,7 +34,7 @@
 | REI03 | BOD REINA | TIENDA | 001 |
 
 > **Aplica para los campos:** `f470_id_bodega`
-
+---
 
 
 ## Centros de Operación
