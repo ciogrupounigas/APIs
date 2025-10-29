@@ -1,4 +1,5 @@
 # 🧩 API - Combustibles Unigas | ERP SIESA
+# Ver. 1.26.10.28
 
 ## 📘 Descripción General
 
@@ -88,10 +89,20 @@ Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejec
 
 ### Servidor de pruebas:
 ```arduino
-https://api-pruebas.unigas.com/nsx/
+/ConnektaQA
 ```
 
 ### Servidor de producción:
 ```arduino
-https://api.unigas.com/nsx/
+/Core
 ```
+
+### Curl
+```arduino
+curl -X 'GET' \
+  'http://SERVER/v3/CONSULTA_CONECTOR?PARAMETROS' \
+  -H 'accept: */*' \
+  -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+  -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXWSXQ'
+```
+---
