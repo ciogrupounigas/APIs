@@ -11,7 +11,6 @@
   - [Factura Tercero](Consulta/ft.md)
   - [Item Precio POS](Consulta/ipp.md)
   - [Terceros](Consulta/tercero.md)
-  
 </details>
 
 <details>
