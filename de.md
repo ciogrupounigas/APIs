@@ -38,30 +38,35 @@
 
 ## 🏣 Centros de Operación
 
+---
 ## 🏢 Compañias
 
+---
 ## 💵 Condiciones de pago
 
+---
 ## 💨 Items
 
+---
 ## 🎏 Lista de precios
 
+---
 ## 💳 Medios de pago
 
+---
 ## 👲 Tipo cliente factura
 
+---
 ## 📧 Tipo de documentos
 
+---
 ## 📮 Tipo sucursales cliente
 
+---
 ## 📲 Unidades de medida
 
+---
 ## 💰 Unidades de negocio
-
-
-
-
-
   - [Bodegas](Consulta/bd.md)
   - [Centros de operación](Consulta/co.md)
   - [Compañías](Consulta/cia.md)
