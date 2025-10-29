@@ -102,7 +102,7 @@
 | 0190009 | GASOLINA CORRIENTE |
 | 0190011 | GASOLINA EXTRA |
 | 0190012 | MAX PRO |
-| 0190005 | GNV 
+| 0190005 | GNV |
 
 > **Aplica para los campos:** `f470_id_item`
 ---
