@@ -48,7 +48,7 @@
 </details>
 
 <details>
-  <summary><strong>Estructura en blanco</strong></summary>
+  <summary><strong>Estructura POST JSON</strong></summary>
 
   - [Factura Venta](estructura/efv.md)
   - [Factura Venta VD](estructura/efvd.md)
