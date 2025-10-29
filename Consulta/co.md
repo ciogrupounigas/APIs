@@ -14,6 +14,8 @@
 | 021 | EDS TRANSUNIDOS | GNV |
 | 025 | EDS PEGASO | GNV | 
 
+Aplica para los campos F350_ID_CO, f470_id_co, f470_id_co_movto, f461_id_co_fact,
+f471_id_co, F201_ID_CO_FACTURA
 
 ## ⚙️ Endpoint: **CENTROSOPERACION**
 ```bash
