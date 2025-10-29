@@ -1,7 +1,8 @@
 <details open>
+  <summary><strong>Welcome</strong></summary>
 
-- [Inicio](README.md)
-- [Glosario](Glosario.md)
+  - [Inicio](README.md)
+  - [Glosario](Glosario.md)
 </details>
 
 <details open>
