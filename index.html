@@ -6,164 +6,256 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Tema oscuro predeterminado -->
-  <meta name="theme-color" content="#1e1e1e" />
-
-  <!-- Docsify -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <link id="theme-style" rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dark.css">
 
   <style>
-    /* ====== Estilos base ====== */
-    body {
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      background-color: #1e1e1e;
-      color: #ddd;
-      line-height: 1.6;
-      margin: 0;
+    :root {
+      --bg-color: #1e1e1e;
+      --text-color: #ddd;
+      --sidebar-bg: #181818;
+      --sidebar-border: #333;
+      --link-color: #2f8cff;
+      --link-hover: #68a8ff;
+      --content-max-width: 1200px;
+      --brand-gradient: linear-gradient(90deg, #002b5c, #004c99);
     }
 
+    body.light-mode {
+      --bg-color: #ffffff;
+      --text-color: #111;
+      --sidebar-bg: #f8f8f8;
+      --sidebar-border: #ddd;
+      --link-color: #0078ff;
+      --link-hover: #005bd1;
+      --brand-gradient: linear-gradient(90deg, #0078ff, #00aaff);
+    }
+
+    /* ===== Layout General ===== */
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* ===== Header fijo superior ===== */
     header {
-      background: linear-gradient(90deg, #003366, #004c99);
-      color: white;
-      padding: 1rem 1.5rem;
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: bold;
-      letter-spacing: 0.5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
-      z-index: 999;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      border-bottom: 1px solid var(--sidebar-border);
+      z-index: 1000;
+      background: var(--brand-gradient);
+      color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s ease;
     }
 
-    #app {
-      margin-top: 80px;
-    }
-
-    /* ====== Sidebar ====== */
-    .sidebar {
-      background-color: #111;
-      color: #ccc;
-      border-right: 1px solid #333;
-    }
-
-    .sidebar a {
-      color: #ddd;
+    header .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
       text-decoration: none;
     }
 
-    .sidebar a:hover {
+    header .title {
+      flex-grow: 1;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.5px;
       color: #fff;
-      background-color: #004c99;
     }
 
-    /* ====== Contenido principal ====== */
-    .markdown-section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-color: #222;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    code {
-      background: #2d2d2d;
-      color: #8be9fd;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-
-    pre code {
-      background: #2d2d2d;
-      display: block;
-      padding: 1em;
+    /* ===== Botón modo oscuro/claro ===== */
+    .theme-toggle {
+      background: transparent;
+      color: #fff;
+      padding: 6px 12px;
       border-radius: 6px;
-      overflow-x: auto;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
     }
 
-    /* ===== Bloques informativos Docsify ===== */
-    .tip {
-      background: #e8f5e9;
-      padding: 1em;
-      border-left: 5px solid #43a047;
-      border-radius: 4px;
-    }
-    .warn {
-      background: #fff8e1;
-      padding: 1em;
-      border-left: 5px solid #fbc02d;
-      border-radius: 4px;
-    }
-    .danger {
-      background: #ffebee;
-      padding: 1em;
-      border-left: 5px solid #e53935;
-      border-radius: 4px;
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
     }
 
-    /* ===== Modo claro ===== */
-    body.light-mode {
-      background-color: #f4f6f8;
-      color: #333;
+    /* ===== Docsify general ===== */
+    #app {
+      padding-top: 80px;
+      opacity: 1;
+      transition: opacity 0.4s ease;
     }
-    body.light-mode .markdown-section {
-      background-color: #fff;
-      color: #333;
+
+    .content {
+      display: flex;
+      flex-direction: row-reverse;
     }
-    body.light-mode code {
-      background: #f5f5f5;
-      color: #0055aa;
+
+    .sidebar {
+      order: 2;
+      border-left: 1px solid var(--sidebar-border);
+      background-color: var(--sidebar-bg);
+      transition: background-color 0.4s ease, border-color 0.4s ease;
     }
-    body.light-mode .tip {
-      background: #f1fff3;
+
+    /* ===== Contenido principal ===== */
+    .markdown-section {
+      max-width: var(--content-max-width);
+      width: 100%;
+      margin: 40px auto;
+      padding: 40px 60px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      border-radius: 10px;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      line-height: 1.6;
     }
-    body.light-mode .warn {
-      background: #fffbe6;
+
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      color: var(--text-color);
+      border-bottom: 1px solid var(--sidebar-border);
+      padding-bottom: 0.3em;
     }
-    body.light-mode .danger {
-      background: #ffecec;
+
+    a {
+      color: var(--link-color);
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--link-hover);
+    }
+
+    body, .content, .sidebar {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* ===== Bloques informativos ===== */
+    .tip { background: #e8f5e9; padding: 1em; border-left: 5px solid #43a047; border-radius: 4px; }
+    .warn { background: #fff8e1; padding: 1em; border-left: 5px solid #fbc02d; border-radius: 4px; }
+    .danger { background: #ffebee; padding: 1em; border-left: 5px solid #e53935; border-radius: 4px; }
+
+    body:not(.light-mode) .tip { background: rgba(67, 160, 71, 0.15); }
+    body:not(.light-mode) .warn { background: rgba(251, 192, 45, 0.15); }
+    body:not(.light-mode) .danger { background: rgba(229, 57, 53, 0.15); }
+
+    /* ===== Animación Fade ===== */
+    body.fade-out #app {
+      opacity: 0;
     }
 
     /* ===== Responsive ===== */
     @media (max-width: 768px) {
-      header .title {
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
         text-align: center;
-        width: 100%;
+        gap: 6px;
       }
+
+      .content {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        order: 1;
+        border-left: none;
+        border-bottom: 1px solid var(--sidebar-border);
+      }
+
       .markdown-section {
-        padding: 1.2rem;
+        margin: 20px;
+        padding: 20px;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    🧩 APIs Combustibles Unigas SAS | ERP SIESA
+  <!-- ===== Header superior fijo ===== -->
+  <header id="mainHeader">
+    <a href="#/" class="logo">🔥</a>
+    <div class="title">APIs Combustibles Unigas SAS | ERP SIESA</div>
+    <div class="theme-toggle" id="themeToggle">🌙 Modo Claro</div>
   </header>
 
+  <!-- ===== Docsify App ===== -->
   <div id="app">Cargando documentación...</div>
 
   <script>
+    // ===== Configuración Docsify =====
     window.$docsify = {
-      name: 'APIs Combustibles Unigas SAS | ERP SIESA',
+      name: 'APIs Combustibles Unigas SAS',
       repo: '',
       loadSidebar: true,
       subMaxLevel: 3,
-      themeColor: '#004c99',
       search: 'auto',
-      alias: {
-        '/.*/_sidebar.md': '/_sidebar.md'
-      },
-      auto2top: true
+      themeColor: '#0078ff',
+      auto2top: true,
+      sidebarDisplayLevel: 0,
+      alias: { '/.*/_sidebar.md': '/_sidebar.md' },
+      loadNavbar: false
+    };
+
+    // ===== Modo oscuro / claro =====
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLink = document.getElementById('theme-style');
+    const savedTheme = localStorage.getItem('docsify-theme-mode');
+
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-mode');
+      themeLink.href = '//cdn.jsdelivr.net/npm/docsify/themes/vue.css';
+      themeToggle.textContent = '☀️ Modo Oscuro';
     }
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        themeLink.href = isLight
+          ? '//cdn.jsdelivr.net/npm/docsify/themes/vue.css'
+          : '//cdn.jsdelivr.net/npm/docsify/themes/dark.css';
+        themeToggle.textContent = isLight ? '☀️ Modo Oscuro' : '🌙 Modo Claro';
+        localStorage.setItem('docsify-theme-mode', isLight ? 'light' : 'dark');
+        document.body.classList.remove('fade-out');
+      }, 300);
+    });
+
+    // ===== Colapsar todo el sidebar al cargar =====
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const toggles = document.querySelectorAll('.sidebar-nav > ul > li');
+        toggles.forEach(li => li.classList.remove('open'));
+      }, 800);
+    });
+
+    // ===== Mantener colapsado al navegar =====
+    window.addEventListener('hashchange', () => {
+      const openGroups = document.querySelectorAll('.sidebar-nav li.open');
+      openGroups.forEach(li => li.classList.remove('open'));
+    });
   </script>
 
-  <!-- Plugins Docsify -->
+  <!-- ===== Scripts Docsify ===== -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
 </body>
 </html>
