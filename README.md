@@ -1,5 +1,5 @@
 # 🧩 API - Combustibles Unigas | ERP SIESA  
-![version](https://img.shields.io/badge/Versión-1.26.10.28-blue.svg)  
+![version](https://img.shields.io/badge/Versión3-1.26.10.28-blue.svg)  
 ![estado](https://img.shields.io/badge/Estado-Estable-brightgreen.svg)  
 ![ERP](https://img.shields.io/badge/ERP-SIESA-orange.svg)
 
