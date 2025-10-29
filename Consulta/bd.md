@@ -34,11 +34,11 @@
 https://SERVER/v3/ejecutarconsulta?idCompania=6207&descripcion=BODEGAS&parametros=IdBodega={IdBodega}|IdCia={IdCia}
 ```
 
-## 🧾 Request Headers
-```bash
+<details> <summary>🧾 <strong>Request Headers</strong></summary>
 Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS
-```
+
+</details>
 
 ## 🔍 Query Params
 ```bash
