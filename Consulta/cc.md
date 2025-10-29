@@ -12,8 +12,10 @@ parametros: IdBodega={IdCC}|IdCia={IdCia}
 ```
 
 ## 💻 Ejemplo
+```bash
 Centro de costos TIC : 233
 Compañia : 1
+```
 
 ## Curl
 ```bash
