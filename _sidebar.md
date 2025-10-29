@@ -1,5 +1,8 @@
-- [Inicio](README.md)
-- [Glosario](Glosario.md)
+<details open>
+  <summary><strong>APIs ERP SIESA</strong></summary>
+  - [Inicio](README.md)
+  - [Glosario](Glosario.md)
+</details>
 
 <details open>
   <summary><strong>Consultas Dinámicas</strong></summary>
@@ -11,11 +14,7 @@
   - [Factura Tercero](Consulta/ft.md)
   - [Item Precio POS](Consulta/ipp.md)
   - [Terceros](Consulta/tercero.md)
-  - [Tipo cliente factura](Consulta/tcf.md)
-  - [Tipo de documentos](Consulta/td.md)
-  - [Tipo sucursales cliente](Consulta/tsc.md)
-  - [Unidades de medida](Consulta/um.md)
-  - [Unidades de negocio](Consulta/un.md)
+  
 </details>
 
 <details>
@@ -40,6 +39,11 @@
   - [Items](Consulta/item.md)
   - [Lista de Precios](Consulta/lp.md)
   - [Medios de Pago](Consulta/mp.md)
+  - [Tipo cliente factura](Consulta/tcf.md)
+  - [Tipo de documentos](Consulta/td.md)
+  - [Tipo sucursales cliente](Consulta/tsc.md)
+  - [Unidades de medida](Consulta/um.md)
+  - [Unidades de negocio](Consulta/un.md)
   
 </details>
 
