@@ -36,27 +36,27 @@
 ---
 
 
-## 📠 Centros de Operación
+## 🏣 Centros de Operación
 
-## Compañias
+## 🏢 Compañias
 
-## Condiciones de pago
+## 💵 Condiciones de pago
 
-## Items
+## 💨 Items
 
-## Lista de precios
+## 🎏 Lista de precios
 
-## Medios de pago
+## 💳 Medios de pago
 
-## Tipo cliente factura
+## 👲 Tipo cliente factura
 
-## Tipo de documentos
+## 📧 Tipo de documentos
 
-## Tipo sucursales cliente
+## 📮 Tipo sucursales cliente
 
-## Unidades de medida
+## 📲 Unidades de medida
 
-## Unidades de negocio
+## 💰 Unidades de negocio
 
 
 
