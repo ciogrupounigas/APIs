@@ -250,3 +250,4 @@
 
 > **Aplica para los campos:** `f470_id_un_movto`
 ---
+© 2025 - Departamento TIC - Combustibles Unigas SAS
