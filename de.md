@@ -62,8 +62,8 @@
 
 ## 🏢 Compañias
 
-| ID_COMPAÑIA | Numero identificación | Razón social | idInterface |
-|----------------|-------------------------|-------------------------------------|------------|
+| ID_COMPAÑIA | NIT | Razón social | idInterface |
+|----------------|------------|-------------------------------------|------------|
 | 1 | 830085008 | COMBUSTIBLES UNIGAS SAS | 1216 |
 | 3 | 800041135 | AUTOMOTORES REINA SAS | 1236 |
 
