@@ -1,6 +1,5 @@
 ## 🏗️ BODEGAS 
-  # COMBUSTIBLES UNIGAS SAS
-
+  *COMBUSTIBLES UNIGAS SAS*
 | **ID_BODEGA** | **Descripción**                     | **ID_CO** |
 |----------------|-------------------------------------|------------|
 | EST01 | BOD ESTANCIA GNV | 002 |
@@ -27,8 +26,8 @@
 
 > **Aplica para los campos:** `f470_id_bodega`
 
-  # AUTOMOTORES REINA SAS
-| ID_BODEGA | Descripción | ID_CO |
+  *AUTOMOTORES REINA SAS*
+| **ID_BODEGA** | **Descripción** | **ID_CO** |
 |----------------|-------------------------------------|------------|
 | REI02 | BOD REINA | LIQUIDOS | 001 |
 | REI03 | BOD REINA | TIENDA | 001 |
