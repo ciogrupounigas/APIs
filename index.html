@@ -5,8 +5,6 @@
     <title>APIs Combustibles Unigas SAS | NSX</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.ico" />
-
-    <!-- Docsify -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
 
     <style>
@@ -18,21 +16,18 @@
         --text-dark: #ffffff;
       }
 
-      body {
+      html[data-theme="light"] body {
         background-color: var(--background-light);
         color: var(--text-light);
-        transition: background-color 0.3s, color 0.3s;
       }
-
-      [data-theme="dark"] body {
+      html[data-theme="dark"] body {
         background-color: var(--background-dark);
         color: var(--text-dark);
       }
 
-      /* Encabezado fijo */
       nav.app-name {
         background: linear-gradient(90deg, #007bff, #0056b3);
-        color: white;
+        color: white !important;
         text-align: center;
         font-weight: bold;
         padding: 10px;
@@ -40,17 +35,14 @@
         border-bottom: 2px solid #004080;
       }
 
-      /* Caja de contenido */
       .markdown-section {
         background-color: inherit;
         color: inherit;
         padding: 2rem;
         border-radius: 10px;
         box-shadow: none;
-        transition: background-color 0.3s;
       }
 
-      /* Botón de tema */
       #theme-toggle {
         position: fixed;
         top: 10px;
@@ -62,54 +54,135 @@
         border-radius: 20px;
         cursor: pointer;
         font-size: 14px;
+        z-index: 999;
+      }
+
+      .sidebar {
+        background-color: inherit;
+        color: inherit;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding-left: 0.5em;
+      }
+      .sidebar li {
+        margin: 3px 0;
+      }
+      .sidebar-nav li a {
+        color: inherit !important;
+        text-decoration: none;
+      }
+      .sidebar-nav li a:hover {
+        color: var(--primary-color) !important;
+      }
+
+      .sidebar-nav li.has-children > a::after {
+        content: "▼";
+        float: right;
+        font-size: 10px;
+        transition: transform 0.2s ease;
+      }
+      .sidebar-nav li.has-children.collapsed > a::after {
+        transform: rotate(-90deg);
       }
     </style>
   </head>
+
   <body>
     <div id="app">Cargando documentación...</div>
     <button id="theme-toggle">🌙 Modo Oscuro</button>
 
     <script>
+      /* ⚙️ Configuración Docsify */
       window.$docsify = {
         name: 'APIs Combustibles Unigas SAS | NSX',
-        repo: '',
         loadSidebar: true,
         subMaxLevel: 2,
         auto2top: true,
         alias: {
           '/.*/_sidebar.md': '/_sidebar.md'
         },
-        executeScript: true,
-        themeColor: '#007bff'
+        themeColor: '#007bff',
+        executeScript: true
       };
 
-      // Tema oscuro/claro persistente
+      /* 🌙 Control del tema claro/oscuro persistente */
       const themeButton = document.getElementById('theme-toggle');
       const currentTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-theme', currentTheme);
-      themeButton.textContent = currentTheme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+      themeButton.textContent =
+        currentTheme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
 
       themeButton.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        const theme =
+          document.documentElement.getAttribute('data-theme') === 'dark'
+            ? 'light'
+            : 'dark';
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        themeButton.textContent = theme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+        themeButton.textContent =
+          theme === 'dark' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
       });
 
-      // --- Forzar todos los menús colapsados al inicio ---
-      document.addEventListener('DOMContentLoaded', () => {
-        const collapse = () => {
-          document.querySelectorAll('.sidebar-nav > ul > li').forEach(li => {
-            const nested = li.querySelector('ul');
-            if (nested) nested.style.display = 'none'; // ocultar todos
-          });
-        };
-        collapse();
-        // Recolapsar al cambiar de página
-        window.addEventListener('hashchange', collapse);
-      });
+      /* 📂 Sidebar tipo acordeón con memoria */
+      function setupAccordion() {
+        const items = document.querySelectorAll('.sidebar-nav > ul > li');
+        const lastOpen = localStorage.getItem('openGroup');
+
+        items.forEach((li) => {
+          const nested = li.querySelector('ul');
+          if (nested) {
+            li.classList.add('has-children', 'collapsed');
+            nested.style.display = 'none';
+
+            // Restaura el grupo abierto anterior
+            const title = li.querySelector('a')?.textContent?.trim();
+            if (title && title === lastOpen) {
+              nested.style.display = 'block';
+              li.classList.remove('collapsed');
+            }
+
+            const link = li.querySelector('a');
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+
+              // Cierra los demás grupos
+              items.forEach((other) => {
+                if (other !== li) {
+                  const sub = other.querySelector('ul');
+                  if (sub) {
+                    sub.style.display = 'none';
+                    other.classList.add('collapsed');
+                  }
+                }
+              });
+
+              // Alterna el actual
+              const isOpen = nested.style.display === 'block';
+              nested.style.display = isOpen ? 'none' : 'block';
+              li.classList.toggle('collapsed', isOpen);
+
+              // Guarda el grupo abierto
+              if (!isOpen) {
+                const groupTitle = li.querySelector('a')?.textContent?.trim();
+                localStorage.setItem('openGroup', groupTitle);
+              } else {
+                localStorage.removeItem('openGroup');
+              }
+            });
+          }
+        });
+      }
+
+      // Espera a que Docsify cargue el sidebar
+      window.addEventListener('hashchange', () => setTimeout(setupAccordion, 500));
+      document.addEventListener('DOMContentLoaded', () =>
+        setTimeout(setupAccordion, 1000)
+      );
     </script>
 
+    <!-- 📦 Carga Docsify -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   </body>
 </html>
