@@ -69,14 +69,19 @@ Sirve como referencia rápida para desarrolladores, analistas y personal técnic
     "email": "jperez@ejemplo.com"
   }
 }
-🧾 Ejemplo de Error JSON
-json
+```
+
+## 🧾 Ejemplo de Error JSON
+
+```json
 Copiar código
 {
   "status": 400,
   "error": "BAD_REQUEST",
   "message": "El parámetro 'fecha' es obligatorio"
 }
+```
+
 🧭 Convenciones de Nombres
 Elemento	Convención	Ejemplo
 Endpoints	minúsculas, separados por guiones medios	/api/v1/facturas-pendientes
@@ -86,6 +91,7 @@ Campos JSON	snake_case	"fecha_emision": "2025-10-29"
 📅 Versionado
 Las versiones de la API se indican en la URL siguiendo el formato v{número}.
 Ejemplo:
-https://api.unigas.com/v1/facturas
+https://api.combustiblesunigas.com/v1/facturas
 
-© 2025 - Equipo de Tecnología y APIs - Grupo Unigas SAS
+---
+© 2025 - Departamento TIC - Combustibles Unigas SAS
