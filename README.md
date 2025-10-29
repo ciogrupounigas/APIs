@@ -44,7 +44,7 @@ La API ofrece un conjunto integral de servicios orientados a la **gestión y con
 Los endpoints están disponibles en el servidor de pruebas, donde se pueden ejecutar consultas y validar los conectores dinámicos antes de su implementación definitiva en producción.
 
 ### Servidor de pruebas:
-```arduino
+```html
 /ConnektaQA
 ```
 
