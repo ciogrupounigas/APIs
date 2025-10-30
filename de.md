@@ -1,4 +1,4 @@
-## 🏗️ BODEGAS 
+## 🏗️ Bodegas Liquidos - GNV
 
 *COMBUSTIBLES UNIGAS SAS*
 
@@ -38,7 +38,7 @@
 > **Aplica para los campos:** `f470_id_bodega`
 ---
 
-## 🏨 BODEGAS POS - CANASTILLA
+## 🏨 Bodegas Canastilla
 
 *COMBUSTIBLES UNIGAS SAS*
 
@@ -65,6 +65,8 @@
 
 ## 🏣 Centros de Operación
 
+*COMBUSTIBLES UNIGAS SAS*
+
 | **ID_CO** | **Descripción**                     | **API** |
 |----------------|-------------------------------------|------------|
 | 002 | EDS ESTANCIA | LIQUIDOS – GNV |
@@ -78,6 +80,15 @@
 | 019 | EDS COTA | LIQUIDOS |
 | 021 | EDS TRANSUNIDOS | GNV |
 | 025 | EDS PEGASO | GNV | 
+
+> **Aplica para los campos:** `F350_ID_CO`, `f470_id_co`, `f470_id_co_movto`, `f461_id_co_fact`,
+`f471_id_co`, `F201_ID_CO_FACTURA`
+
+*AUTOMOTORES REINA SAS*
+
+| **ID_CO** | **Descripción**                     | **API** |
+|----------------|-------------------------------------|------------|
+| 001 | EDS REINA | LIQUIDOS |
 
 > **Aplica para los campos:** `F350_ID_CO`, `f470_id_co`, `f470_id_co_movto`, `f461_id_co_fact`,
 `f471_id_co`, `F201_ID_CO_FACTURA`
