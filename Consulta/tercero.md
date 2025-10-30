@@ -14,8 +14,10 @@ de la información.
 **key**
 **token**
 ```
-* Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
+
 * **idCompania:** `6207` es un identificador del **middleware**
+* Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
+
 ---
 
 ## ⚙️ Endpoint: **TERCEROS**
