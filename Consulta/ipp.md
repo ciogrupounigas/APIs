@@ -135,7 +135,7 @@ curl -X 'GET' \
 ```
 ---
 
-**Explicacion** Response body:
+## 🔮 **Explicación** Response body:
 ```json
 {
  "f_item": 112841, CODIGO ITEM
