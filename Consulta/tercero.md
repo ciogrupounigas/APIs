@@ -25,7 +25,7 @@ FechaFin=20250101
 IdCia=1
 ```
 
-## Curl
+## 🔓 Curl
 ```bash
 curl -X 'GET' \
   'http://SERVER/v3/EjecutarConsulta??idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio%3D20241201%7CFechaFin%3D20250101%7CIdCia%3D1' \
@@ -72,6 +72,8 @@ curl -X 'GET' \
         "correo": "jose_benjumeag@yahoo.es",
         "FechaCrecion": "20241228"
       }
+  }
+}
 ```
 
 ## ⚠️ Ejemplo de error 400 Bad Request
