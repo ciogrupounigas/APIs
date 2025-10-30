@@ -29,14 +29,14 @@ Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS
 ```
 
-## 🔍 Query Params
+## 🔍 Query Parameters
 ```bash
 idCompania: 6207
 descripcion: TERCEROS
 parametros: FechaInicio={FechaInicio}|FechaFin={FechaFin}|IdCia={IdCia}
 ```
 
-## 💻 Ejemplo
+## 💻 Ejemplo Query Parameters
 ```bash
 FechaInicio=20241201
 FechaFin=20250101
