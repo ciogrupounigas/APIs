@@ -1,6 +1,6 @@
 ![GET](https://img.shields.io/badge/v3/EjecutarConsulta-GET-brightgreen.svg)
 
-Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parametro **IdCia**
+Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
 **idCompania:** `6207` es un identificador del **middleware**
 
 ## ⚙️ Endpoint: **TERCEROS**
