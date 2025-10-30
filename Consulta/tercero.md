@@ -1,7 +1,22 @@
 ![GET](https://img.shields.io/badge/v3/EjecutarConsulta-GET-brightgreen.svg)
 
-Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
-**idCompania:** `6207` es un identificador del **middleware**
+---
+En cuanto al consumo de la API, la información de autenticación (credenciales, claves o tokens)
+será suministrada por un canal seguro e independiente, utilizando mecanismos temporales de
+intercambio de información confidencial, tales como OneTimeSecret, PwPush o ZeroBin.
+
+Estos servicios permiten compartir datos sensibles que solo pueden visualizarse una vez y que
+posteriormente se eliminan de forma automática, garantizando la integridad y confidencialidad
+de la información.
+
+```bash
+**server**
+**key**
+**token**
+```
+* Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
+* **idCompania:** `6207` es un identificador del **middleware**
+---
 
 ## ⚙️ Endpoint: **TERCEROS**
 ```bash
