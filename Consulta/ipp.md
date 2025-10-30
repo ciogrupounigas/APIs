@@ -17,9 +17,9 @@ de la información.
 
 * **idCompania:** `6207` es un identificador del **middleware**
 * Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
-* Validar **ID_BODEGA** en la sección *Datos estáticos* para el parámetro **IdBodega**
+* Validar **ID_BODEGAPOS** en la sección *Datos estáticos* para el parámetro **IdBodega**
 * Validar **ID_LISTA_PRECIO** en la sección *Datos estáticos* para el parámetro **IdPrecio**
-**FALTA AGREGAR TABLA BODEGAS POS DATOS ESTATICOS SQL VERIFICAR PROCEDIMIENTO ALMACENADO**
+**FALTA AGREGAR TABLA BODEGAPOS DATOS ESTATICOS SQL VERIFICAR PROCEDIMIENTO ALMACENADO**
 ---
 
 ## ⚙️ Endpoint: **ITEMPRECIOSPOS**
