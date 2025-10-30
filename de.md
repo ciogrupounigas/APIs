@@ -58,7 +58,7 @@
 
 | **ID_BODEGA** | **Descripción** | **ID_CO** |
 |----------------|-------------------------------------|------------|
-|  | BOD REINA  TIENDA | 001 |
+| 83 | BOD REINA  TIENDA | 001 |
 
 > **Aplica en el parámetro:** `IdBodega` **ITEMPRECIOSPOS**
 ---
