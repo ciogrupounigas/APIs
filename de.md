@@ -52,7 +52,7 @@
 | 78 | BOD COTA, TIENDA | 019 |
 
 
-> **Aplica en el parámetro:** `IdBodega` **ITEMPRECIOSPOS**
+> **Aplica en el parámetro:** `IdBodega` Endpoint **ITEMPRECIOSPOS**
 
 *AUTOMOTORES REINA SAS*
 
@@ -60,7 +60,7 @@
 |----------------|-------------------------------------|------------|
 | 83 | BOD REINA  TIENDA | 001 |
 
-> **Aplica en el parámetro:** `IdBodega` **ITEMPRECIOSPOS**
+> **Aplica en el parámetro:** `IdBodega` Endpoint **ITEMPRECIOSPOS**
 ---
 
 ## 🏣 Centros de Operación
