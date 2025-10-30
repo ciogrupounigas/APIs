@@ -38,6 +38,45 @@
 > **Aplica para los campos:** `f470_id_bodega`
 ---
 
+## 🏨 BODEGAS POS
+
+*COMBUSTIBLES UNIGAS SAS*
+
+| **ID_BODEGA** | **Descripción**                     | **ID_CO** |
+|----------------|-------------------------------------|------------|
+|  | BOD ESTANCIA GNV | 002 |
+|  | BOD ESTANCIA, LIQUIDOS | 002 |
+|  | BOD ESTANCIA, TIENDA | 002 |
+|  | BOD TEXANA GNV | 003 |
+|  | BOD TEXANA, LIQUIDOS | 003 |
+| 8 | BOD TEXANA, TIENDA | 003 |
+|  | BOD REINA GNV | 010 |
+|  | BOD AVENIDA GNV | 011 |
+|  | BOD TERMINAL, GNV | 013 |
+|  | BOD MONTEARROYO, GNV | 015 |
+|  | BOD MONTEARROYO LIQUIDOS | 015 |
+|  | BOD MONTEARROYO TIENDA | 015 |
+|  | BOD LA GRAN AVENIDA, LIQUIDOS | 016 |
+|  | BOD LA GRAN AVENIDA, TIENDA | 016 |
+|  | BOD NUEVA DIANA, GNV | 018 |
+|  | BOD NUEVA DIANA, LIQUIDOS | 018 |
+|  | BOD NUEVA DIANA, TIENDA | 018 |
+|  | BOD COTA, LIQUIDOS | 019 |
+|  | BOD COTA, TIENDA | 019 |
+|  | BOD TRANSUNIDOS GNV | 021 |
+|  | BOD PEGASO GNV | 022 |
+
+> **Aplica en el parámetro:** `IdBodega` **ITEMPRECIOSPOS**
+
+*AUTOMOTORES REINA SAS*
+
+| **ID_BODEGA** | **Descripción** | **ID_CO** |
+|----------------|-------------------------------------|------------|
+|  | BOD REINA  LIQUIDOS | 001 |
+|  | BOD REINA  TIENDA | 001 |
+
+> **Aplica en el parámetro:** `IdBodega` **ITEMPRECIOSPOS**
+---
 
 ## 🏣 Centros de Operación
 
