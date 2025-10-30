@@ -5,6 +5,12 @@
 https://SERVER/v3/ejecutarconsulta?idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio={FechaInicio}|FechaFin={FechaFin}|IdCia={IdCia}
 ```
 
+## 🧾 Request Headers
+```bash
+Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS
+```
+
 ## 🔍 Query Params
 ```bash
 idCompania: 6207
@@ -37,7 +43,7 @@ curl -X 'GET' \
   "detalle": {
     "Table": [
       {
-        "ID": "6772455        ",
+        "ID": "1234567        ",
         "TipoID": "C",
         "Nombre": "LUIS EDUARDO",
         "Apellidos": "PAEZ MARTINEZ",
@@ -52,7 +58,7 @@ curl -X 'GET' \
         "FechaCrecion": "20241213"
       },
       {
-        "ID": "830013183",
+        "ID": "860098098",
         "TipoID": "N",
         "Nombre": "",
         "Apellidos": "",
