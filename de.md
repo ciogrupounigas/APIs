@@ -38,7 +38,7 @@
 > **Aplica para los campos:** `f470_id_bodega`
 ---
 
-## 🏨 BODEGAS POS
+## 🏨 BODEGAS POS - CANASTILLA
 
 *COMBUSTIBLES UNIGAS SAS*
 
