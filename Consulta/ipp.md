@@ -1,4 +1,4 @@
-![GET](https://img.shields.io/badge/v3/EjecutarConsulta-GET-brightgreen.svg) **ITEMPRECIOSPOS**
+![GET](https://img.shields.io/badge/v3/EjecutarConsulta-GET/ITEMPRECIOSPOS-brightgreen.svg)
 
 ---
 En cuanto al consumo de la **API**, la información de autenticación (credenciales, claves o tokens)
