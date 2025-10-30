@@ -1,6 +1,6 @@
 ![GET](https://img.shields.io/badge/v3/EjecutarConsulta-GET-brightgreen.svg)
 
-## ⚙️ Endpoint: **CENTROSOPERACION**
+## ⚙️ Endpoint: **TERCEROS**
 ```bash
 https://SERVER/v3/ejecutarconsulta?idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio={FechaInicio}|FechaFin={FechaFin}|IdCia={IdCia}
 ```
@@ -14,7 +14,7 @@ Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS
 ## 🔍 Query Params
 ```bash
 idCompania: 6207
-descripcion: CENTROSOPERACION
+descripcion: TERCEROS
 parametros: FechaInicio={FechaInicio}|FechaFin={FechaFin}|IdCia={IdCia}
 ```
 
