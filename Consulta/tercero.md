@@ -48,7 +48,7 @@ IdCia=1
 ## 🔓 Curl
 ```bash
 curl -X 'GET' \
-  'http://SERVER/v3/EjecutarConsulta??idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio%3D20241201%7CFechaFin%3D20250101%7CIdCia%3D1' \
+  'http://SERVER/v3/EjecutarConsulta?idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio%3D20241201%7CFechaFin%3D20250101%7CIdCia%3D1' \
   -H 'accept: */*' \
   -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
   -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS'

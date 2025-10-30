@@ -19,7 +19,7 @@ de la información.
 * Validar **ID_COMPAÑIA** en la sección *Datos estáticos* para el parámetro **IdCia**
 * Validar **ID_BODEGA** en la sección *Datos estáticos* para el parámetro **IdBodega**
 * Validar **ID_LISTA_PRECIO** en la sección *Datos estáticos* para el parámetro **IdPrecio**
-
+**FALTA AGREGAR TABLA BODEGAS POS DATOS ESTATICOS SQL VERIFICAR PROCEDIMIENTO ALMACENADO**
 ---
 
 ## ⚙️ Endpoint: **ITEMPRECIOSPOS**
@@ -42,15 +42,15 @@ parametros: IdCia={IdCia}|IdBodega={IdBodega}|IdPrecio={IdPrecio}
 
 ## 💻 Ejemplo Query Parameters
 ```bash
-FechaInicio=20241201
-FechaFin=20250101
 IdCia=1
+IdBodega=8
+IdPrecio=003
 ```
 
 ## 🔓 Curl
 ```bash
 curl -X 'GET' \
-  'http://SERVER/v3/EjecutarConsulta??idCompania=6207&descripcion=TERCEROS&parametros=FechaInicio%3D20241201%7CFechaFin%3D20250101%7CIdCia%3D1' \
+  'http://SERVER/v3/EjecutarConsulta?idCompania=6207&descripcion=ITEMPRECIOSPOS&parametros=IdCia%3D1%7CIdBodega%3D8%7CIdPrecio%3D003' \
   -H 'accept: */*' \
   -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
   -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS'
@@ -65,35 +65,63 @@ curl -X 'GET' \
   "detalle": {
     "Table": [
       {
-        "ID": "1234567        ",
-        "TipoID": "C",
-        "Nombre": "LUIS EDUARDO",
-        "Apellidos": "PAEZ MARTINEZ",
-        "RazonSocial": "PAEZ MARTINEZ LUIS EDUARDO",
-        "Estado": "Activo",
-        "Sucursal": "001 - PAEZ MARTINEZ LUIS EDUARDO",
-        "CondicionPago": "CON - CONTADO",
-        "Cupo": 0,
-        "Cliente": "Si",
-        "Proveedor": "No",
-        "correo": "",
-        "FechaCrecion": "20241213"
+        "f_item": 13054,
+        "f_codigo_barra_principal": "7705955103044",
+        "f_desc_item": "ACEITE MOBIL SPECIAL HD 50 1/4-946ml",
+        "f_desc_corta": "MOBIL  HD 50 1/4",
+        "f_um": "CUA ",
+        "f_bodega": "TEX03",
+        "f_desc_bodega": "BOD TEXANA, TIENDA",
+        "f_ext_detalle_1": null,
+        "f_desc_ext_detalle_1": null,
+        "f_cant_existencia_actual": 16,
+        "f_precio_unit": 26000,
+        "f_impto1": 0,
+        "f_impto2": 0,
+        "f_impto4": 0,
+        "f_impto3": 0,
+        "f_tipo_inv": "IN3502    ",
+        "f_fecha_actualizacion": "2018-12-06T14:51:27",
+        "f_rowid_item": 78,
+        "f_rowid_item_ext": 79,
+        "f_01_GRP": "PRODUCTOS AUTOMOTRICES                  ",
+        "f_01_LIN": "LUBRICANTES"
       },
       {
-        "ID": "860098098",
-        "TipoID": "N",
-        "Nombre": "",
-        "Apellidos": "",
-        "RazonSocial": "JOSE BENJUMEA G. Y CIA LTDA",
-        "Estado": "Activo",
-        "Sucursal": "001 - JOSE BENJUMEA G. Y CIA LTDA",
-        "CondicionPago": "CON - CONTADO",
-        "Cupo": 0,
-        "Cliente": "Si",
-        "Proveedor": "No",
-        "correo": "jose_benjumeag@yahoo.es",
-        "FechaCrecion": "20241228"
+        "f_item": 105144,
+        "f_codigo_barra_principal": "7702155027637",
+        "f_desc_item": "AMBIENTADOR SHICK  AUTO FRESCO  PREMIUM",
+        "f_desc_corta": "AMB  SHICK  AUTO FR",
+        "f_um": "UND ",
+        "f_bodega": "     ",
+        "f_desc_bodega": " ",
+        "f_ext_detalle_1": "634",
+        "f_desc_ext_detalle_1": "CITRUS   ",
+        "f_cant_existencia_actual": 0,
+        "f_precio_unit": 0,
+        "f_impto1": 19,
+        "f_impto2": 0,
+        "f_impto4": 0,
+        "f_impto3": 0,
+        "f_tipo_inv": "IN3502E   ",
+        "f_fecha_actualizacion": "2021-12-09T11:43:42",
+        "f_rowid_item": 9386,
+        "f_rowid_item_ext": 17797,
+        "f_01_GRP": "PRODUCTOS AUTOMOTRICES                  ",
+        "f_01_LIN": "TBAS"
       }
+    ],
+    "Table1": [
+      {
+        "tipo": 5,
+        "cri1": "IVA",
+        "cri2": "ICONS",
+        "cri3": "INCP",
+        "cri4": "INC",
+        "cri5": "",
+        "cri6": ""
+      }
+    ]
   }
 }
 ```
@@ -102,7 +130,7 @@ curl -X 'GET' \
 ```bash
 {
   "status": 400,
-  "mensaje": "Parámetros inválidos o faltantes: FechaInicio,FechaFin,IdCia"
+  "mensaje": "Parámetros inválidos o faltantes: IdCia, IdBodega, IdPrecio"
 }
 ```
 ---
