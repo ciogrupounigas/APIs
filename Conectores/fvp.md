@@ -1,3 +1,36 @@
+![POST](https://img.shields.io/badge/v3/ConectoresImportar-POST-orange.svg)
+
+
+## ⚙️ Endpoint: **FACTURA VENTA POS - CANASTILLA**
+
+```bash
+'http://SERVER/ConnektaQA/v3/ConectoresImportar?idCompania=6207&idInterface={idInterface}&idDocumento=148233&nombreDocumento=FACTURAVENTA' 
+```
+## 🔍 Query Params
+```bash
+idCompania: 6207
+idInterface: Verificar cc.md
+idDocumento: 148233
+nombreDocumento: FACTURAVENTA
+```
+
+## 💻 Ejemplo
+```bash
+idInterface: 1216
+Compañia : 1
+```
+
+
+## Curl
+```bash
+curl -X 'POST' \
+  'http://SERVER/ConnektaQA/v3/ConectoresImportar?idCompania=6207&idInterface=1216&idDocumento=148233&nombreDocumento=FACTURAVENTA' \
+  -H 'accept: */*' \
+  -H 'Key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+  -H 'Token: WSXWSXWSXWSXWSXWSXWSXWSXWSXWS' \
+```
+
+
 ## 🧾 Ejemplo: 1 productos 1 metodo de pago.
 
 ```json
