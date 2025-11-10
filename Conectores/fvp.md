@@ -14,7 +14,7 @@ idDocumento: 148233
 nombreDocumento: FACTURAVENTA
 ```
 
-* Validar **Compañias** en la sección *Datos estáticos* para el parámetro **IdInterface**
+* Validar **Compañias** en la sección *Datos estáticos* para el parámetro **IdInterface** 
 
 ## 💻 Ejemplo
 ```bash
@@ -22,7 +22,7 @@ idInterface: 1216
 Compañia : 1
 ```
 
-## Curl
+## 🔓 Curl
 ```bash
 curl -X 'POST' \
   'http://SERVER/ConnektaQA/v3/ConectoresImportar?idCompania=6207&idInterface=1216&idDocumento=148233&nombreDocumento=FACTURAVENTA' \
