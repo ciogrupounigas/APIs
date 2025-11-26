@@ -49,7 +49,7 @@
 | 38 | BOD MONTEARROYO TIENDA | 015 |
 | 43 | BOD LA GRAN AVENIDA, TIENDA | 016 |
 | 53 | BOD NUEVA DIANA, TIENDA | 018 |
-| 78 | BOD COTA, TIENDA | 019 |
+| 58 | BOD COTA, TIENDA | 019 |
 
 
 > **Aplica en el parámetro:** `IdBodega` Endpoint **ITEMPRECIOSPOS**
